@@ -47,7 +47,7 @@ session_start();
                 </div>
               </form>
               <div class="col-6 text-center">
-                <span class="mx-auto d-block"><a href="#">Recuperar contraseña</a></span>
+                <span class="mx-auto d-block"><a href="forgotpassword.php">Recuperar contraseña</a></span>
               </div>
             </div>
           </div>
