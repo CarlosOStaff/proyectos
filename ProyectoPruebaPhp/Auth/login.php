@@ -19,7 +19,7 @@ if ($result->num_rows > 0) {
             } else {
                 $_SESSION['cliente'] = $row;
                 $sessionId = $_SESSION['session_id'] = session_id();
-                header("Location: ../Vistas/Cliente/index.html");
+                header("Location: ../Vistas/Cliente/index.php");
                 exit();
             }
         } else {
