@@ -16,10 +16,10 @@
         <div class="container-fluid">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-white fst-italic fw-bold" href="#">Inicio</a>
+                    <a class="nav-link text-white fst-italic fw-bold" href="../Cliente/index.php">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white fst-italic fw-bold" href="#">Mis
+                    <a class="nav-link text-white fst-italic fw-bold" href="../Cliente/misLibros.php">Mis
                         libros</a>
                 </li>
                 <li class="nav-item">
