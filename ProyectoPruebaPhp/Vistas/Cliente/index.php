@@ -2,6 +2,11 @@
 include('../Layouts/menu_cliente.php');
 include('../../BD/conexion.php');
 $name = $_SESSION['cliente'];
+if (!isset($_SESSION['cliente'])) {
+    $_SESSION['message'] = 'No has iniciado sesion';
+    header('Location: ../Auth/login.php');
+    exit();
+}
 
 echo '<h1 class="text-center mt-4">Bienvenido ' . $name['nombre'] . '</h1>';
 ?>
@@ -27,15 +32,14 @@ echo '<h1 class="text-center mt-4">Bienvenido ' . $name['nombre'] . '</h1>';
                         if ($result) {
                             while ($row = $result->fetch_assoc()) {
                                 echo '<tr>';
-                                echo '<td class="fs-4">' . $row['id'] . '</td>';
+                                echo '<td class="fs-4" name ="libro">' . $row['id'] . '</td>';
                                 echo '<td class=""><img src="../../Recursos/img/portadaLibros/' . $row['imagen'] . '" alt="" class="img-fluid mw-100 w-100 h-auto"></td>';
-
                                 echo '<td class="fs-5">' . $row['titulo_libro'] . '</td>';
                                 echo '<td class="fs-5">' . $row['descripcion'] . '</td>';
                                 echo '<td class="fs-5">' . $row['nombre_categoria'] . '</td>';
                                 echo '<td>';
-                                echo '<form action="#" method="POST">';
-                                echo '<button type="submit" class="btn btn-success m-2" aria-label="Eliminar Usuario" title="Eliminar Usuario">';
+                                echo '<form action="../../Controladores/Cliente/prestarLibro.php/libro='.$row['id'].'" method="POST">';
+                                echo '<button type="submit" class="btn btn-success m-2" name="libroId" value='.$row['id'].' aria-label="Prestar libro" title="Prestar libro">';
                                 echo '<i class="fas fa-book"> Pedir Prestado</i>';
                                 echo '</button>';
                                 echo '</form>';
@@ -160,4 +164,6 @@ echo '<h1 class="text-center mt-4">Bienvenido ' . $name['nombre'] . '</h1>';
         });
     });
 </script>
-<?php include('../Layouts/footer.php'); ?>
+<?php 
+include ('../Layouts/modal.php');
+include('../Layouts/footer.php'); ?>
