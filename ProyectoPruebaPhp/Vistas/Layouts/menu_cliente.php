@@ -15,14 +15,14 @@
         <div class="container-fluid">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-white fst-italic fw-bold" href="{{ url('/cliente/home') }}">Inicio</a>
+                    <a class="nav-link text-white fst-italic fw-bold" href="#">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white fst-italic fw-bold" href="{{ route('user.listBooks') }}">Mis
+                    <a class="nav-link text-white fst-italic fw-bold" href="#">Mis
                         libros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white fst-italic fw-bold" href="..\..\Auth\logout.php">Logout</a>
+                    <a class="nav-link text-white fst-italic fw-bold" href="../../Auth/logout.php">Logout</a>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto text-center">
@@ -37,7 +37,7 @@
                             class="mh-25 mw-25 h-25 w-25 mx-1 px-3 rounded-circle" id="profileImage">' . $user['nombre'] . '
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Mi cuenta</a></li>
+                        <li><a class="dropdown-item" href="../Cliente/profile.php">Mi cuenta</a></li>
                     </ul>
                 </li>';
                 ?>
