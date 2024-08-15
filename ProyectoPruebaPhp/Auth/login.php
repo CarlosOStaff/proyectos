@@ -6,12 +6,11 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 $query = "SELECT * FROM users WHERE email = '$email'";
 $result = $mysqli->query($query);
-$row = $result->fetch_array(MYSQLI_ASSOC);
-
+$row = $result->fetch_array();
 if ($result->num_rows > 0) {
     if (password_verify($password, $row['password'])) {
         if (!is_null($row['email_verified_at'])) {
-            if ($row['rol_id'] === 1) {
+            if ($row['rol_id'] == 1) {
                 $_SESSION['admin'] = $row;
                 $sessionId = $_SESSION['session_id'] = session_id();
                 header("Location: ../Vistas/Admin/index.html");
