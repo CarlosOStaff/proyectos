@@ -17,8 +17,8 @@ include('../../Controladores/Cliente/misLibros.php');
             echo '<p class="card-text">' . ($row['descripcion']) . '</p>';
             echo '<p class="card-text"><small class="text-muted fst-italic"><strong>Categoria: ' . ($row['nombre_categoria']) . '</strong></small></p>';
             echo '<p class="card-text"><small class="text-muted fst-italic fw-bold"><strong>Fecha de prestamo: ' . ($row['fecha_prestamo']) . '</strong></small></p>';
-            echo '<form action="#" method="POST">';
-            echo '<button type="submit" class="btn btn-success waves-effect waves-light w-sm fst-italic fw-bold">';
+            echo '<form action="../../Controladores/Cliente/devolverLibro.php/libro_id='.$row['id'].'" method="POST">';
+            echo '<button type="submit" name="libroId" value='.$row['id'].' class="btn btn-success waves-effect waves-light w-sm fst-italic fw-bold">';
             echo '<i class="mdi mdi-pencil d-block font-size-16"></i> Devolver';
             echo '</button>';
             echo '</form>';
@@ -30,3 +30,4 @@ include('../../Controladores/Cliente/misLibros.php');
         ?>
     </div>
 </div>
+<?php include('../Layouts/modal.php')?>
