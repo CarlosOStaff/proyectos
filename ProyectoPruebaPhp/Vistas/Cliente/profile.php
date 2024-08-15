@@ -2,8 +2,7 @@
 include('../Layouts/menu_cliente.php');
 require_once('../../BD/conexion.php');
 
-// Fetch user data from session or database
-$user = $_SESSION['cliente'];
+include('../../Controladores/Cliente/showperfil.php');
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +25,7 @@ $user = $_SESSION['cliente'];
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title mb-4 fst-italic fw-bold">Mis datos</h4>
-                        <form action="update_user.php" method="POST" enctype="multipart/form-data">
+                        <form action="../../Controladores/Cliente/editarPerfil.php" method="POST" enctype="multipart/form-data">
                             <div class="mb-3">
                                 <label for="img_perfil" class="form-label fst-italic fw-bold">
                                     Selecciona una imagen de perfil

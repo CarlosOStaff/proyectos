@@ -30,11 +30,11 @@
                 <?php
                 session_start();
                 $user = $_SESSION['cliente'];
-                var_dump( $user['img_perfil']);
+                var_dump($user['img_perfil']);
                 echo '<li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle text-white fw-bold" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="../../Recursos/img/users/perfil/'.$user['img_perfil'].'"
+                        <img src="../../Recursos/img/users/perfil/' . $user['img_perfil'] . '"
                             class="mh-25 mw-25 h-25 w-25 mx-1 px-3 rounded-circle" id="profileImage">' . $user['nombre'] . '
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -45,6 +45,20 @@
             </ul>
         </div>
     </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function updateProfileImage() {
+                fetch('')
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('profileImage').src = '../../Recursos/img/users/perfil/' + data.img_perfil;
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+            // Actualizar la imagen del perfil cada 5 segundos
+            setInterval(updateProfileImage, 5000);
+        });
+    </script>
 </body>
 
 </html>
