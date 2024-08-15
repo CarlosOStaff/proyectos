@@ -13,7 +13,7 @@ if ($result->num_rows > 0) {
             if ($row['rol_id'] == 1) {
                 $_SESSION['admin'] = $row;
                 $sessionId = $_SESSION['session_id'] = session_id();
-                header("Location: ../Vistas/Admin/index.html");
+                header("Location: ../Vistas/Admin/index.php");
                 exit();
             } else {
                 $_SESSION['cliente'] = $row;
