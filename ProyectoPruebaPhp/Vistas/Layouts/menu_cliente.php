@@ -30,7 +30,6 @@
                 <?php
                 session_start();
                 $user = $_SESSION['cliente'];
-                var_dump($user['img_perfil']);
                 echo '<li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle text-white fw-bold" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">

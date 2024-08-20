@@ -24,7 +24,7 @@
             <div class="container-fluid">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-white fw-bold" href="#">Inicio</a>
+                        <a class="nav-link text-white fw-bold" href="../index.php">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white fw-bold" href="#">Usuarios activos</a>
@@ -37,7 +37,6 @@
                 <?php
                 session_start();
                 $user = $_SESSION['admin'];
-                var_dump($user['img_perfil']);
                 echo '<li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle text-white fw-bold" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
