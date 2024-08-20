@@ -16,6 +16,8 @@
         <h2 class="text-center fst-italic fw-bold mt-3 mb-3">Registrate para poder ver nuestros catalogos de libros</h2>
         <div class="row justify-content-center align-items-center">
             <div class="col-xl-6 shadow-lg mt-4 p-4 rounded-4">
+                <?php include('../Layouts/modal.php'); ?>
+
                 <div class="">
                     <a href="..\Home\index.php">Volver al inicio</a>
                     <div class="card-body">
@@ -105,13 +107,6 @@
                     <!-- end card body -->
                 </div>
                 <!-- end card -->
-                @if (session('message_cliente_ok'))
-                <div class="alert alert-success"><i class="fas fa-check m-2"></i>{{session('message_cliente_ok')}}</div>
-                @endif
-                @if (session('message_error_register'))
-                <div class="alert alert-warning"><i
-                        class="fas fa-exclamation-triangle m-2"></i>{{session('message_error_register')}}</div>
-                @endif
                 <script type="text/javascript">
                     function validarPasswords() {
                         var pass = document.getElementById("password").value;

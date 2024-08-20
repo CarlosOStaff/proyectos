@@ -27,10 +27,10 @@
                         <a class="nav-link text-white fw-bold" href="../index.php">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white fw-bold" href="#">Usuarios activos</a>
+                        <a class="nav-link text-white fw-bold" href="../usuariosActivos/usuariosActivos.php">Usuarios activos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="../../Auth/Logout.php" class="nav-link text-white fw-bold">Logout</a>
+                        <a href="..\..\..\..\ProyectoPruebaPhp\Auth\logout.php" class="nav-link text-white fw-bold">Logout</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto text-center">

@@ -59,9 +59,8 @@ if (!isset($_SESSION['admin'])) {
                         </div>
                         <!-- end table-responsive -->
                     </div>
-                    <?php include('../../Layouts/modal.php') ?>
-
                 </div>
+                <?php include('../../Layouts/modal.php') ?>
             </div>
         </div>
 </div>

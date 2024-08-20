@@ -21,7 +21,6 @@ if ($result->num_rows > 0) {
     $password_reset_expires_at = $now->format('Y-m-d H:i:s');
     $queryUpdate = "UPDATE users SET password_reset_token ='$password_reset_token', password_reset_expires_at='$password_reset_expires_at' WHERE email = '$email'";
     $result = $mysqli->query($queryUpdate);
-    var_dump($result);
     $mail = new PHPMailer(true);
     try {
         $mail->SMTPDebug = 0;                      //Enable verbose debug output
