@@ -97,7 +97,7 @@ $user = $_SESSION['admin'];
                             <i class="fas fa-users fa-3x"></i>
                             </span>
                         </div>
-                        <h5 class="font-size-15 mb-1"><a href="#"
+                        <h5 class="font-size-15 mb-1"><a href="Admins/admisActivos.php"
                                 class="text-dark fst-italic">Administradores
                                 activos</a></h5>
                     </div>
