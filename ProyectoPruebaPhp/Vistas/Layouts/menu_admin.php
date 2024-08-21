@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../../Css/menu_cliente.css">
     <link rel="stylesheet" href="../../Css/modal.css">
-    <link rel="stylesheet" href="../../Css/libropreview.css">
-
 </head>
 
 <body>

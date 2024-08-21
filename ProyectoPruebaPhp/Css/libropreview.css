@@ -1,40 +1,32 @@
-/* El modal (fondo) */
-.modal {
-    display: none; /* Oculto por defecto */
-    position: fixed; /* Se queda en la pantalla */
-    z-index: 1; /* Se coloca en la parte superior */
+ /* Estilo para el modal */
+ .modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Altura completa */
-    overflow: auto; /* Habilitar el desplazamiento si es necesario */
-    background-color: rgba(0,0,0,0.5); /* Fondo negro con opacidad */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
 }
-
-/* Contenido del modal */
-.modal-dialog {
-    margin: 15% auto; /* Centrado en la pantalla */
-}
-
 .modal-content {
     background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
     border: 1px solid #888;
-    border-radius: 5px;
-    width: 80%; /* Ancho del modal */
+    width: 80%;
 }
-
-/* El botón de cerrar (x) */
 .close {
     color: #aaa;
+    float: right;
     font-size: 28px;
     font-weight: bold;
-    border: none;
-    background: none;
-    cursor: pointer;
 }
-
 .close:hover,
 .close:focus {
     color: black;
     text-decoration: none;
+    cursor: pointer;
 }

@@ -65,7 +65,7 @@ $user = $_SESSION['admin'];
                             include('../../Controladores/Admin/librosPrestados.php');
                             echo '<h4 class="mb-2 text-center h1 fst-italic">' . $row['total'] . '</h4>';
                             ?>
-                            <a href="#"
+                            <a href="Libros/librosprestados.php"
                                 class="btn btn-primary waves-effect waves-light btn-sm d-flex justify-content-center font-size-15 fw-bold mt-4">Ver
                                 más</a>
                         </div>
