@@ -1,0 +1,40 @@
+/* El modal (fondo) */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Se queda en la pantalla */
+    z-index: 1; /* Se coloca en la parte superior */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    overflow: auto; /* Habilitar el desplazamiento si es necesario */
+    background-color: rgba(0,0,0,0.5); /* Fondo negro con opacidad */
+}
+
+/* Contenido del modal */
+.modal-dialog {
+    margin: 15% auto; /* Centrado en la pantalla */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 80%; /* Ancho del modal */
+}
+
+/* El botón de cerrar (x) */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}

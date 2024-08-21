@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../../Css/menu_cliente.css">
     <link rel="stylesheet" href="../../Css/modal.css">
+    <link rel="stylesheet" href="../../Css/libropreview.css">
 
 </head>
 
@@ -27,7 +28,7 @@
                         <a class="nav-link text-white fw-bold" href="../index.php">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white fw-bold" href="../usuariosActivos/usuariosActivos.php">Usuarios activos</a>
+                        <a class="nav-link text-white fw-bold" href="..\..\..\..\ProyectoPruebaPhp\Vistas\Admin\usuariosActivos/usuariosActivos.php">Usuarios activos</a>
                     </li>
                     <li class="nav-item">
                         <a href="..\..\..\..\ProyectoPruebaPhp\Auth\logout.php" class="nav-link text-white fw-bold">Logout</a>
