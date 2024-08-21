@@ -48,7 +48,7 @@ $user = $_SESSION['admin'];
                             include('../../Controladores/Admin/libros.php');
                             echo '<h4 class="mb-2 text-center h1 fst-italic">' . $row['total'] . '</h4>';
                             ?>
-                            <a href="#"
+                            <a href="Libros/libros.php"
                                 class="btn btn-primary waves-effect waves-light btn-sm d-flex justify-content-center fst-italic fw-bold mt-4">Ver
                                 más</a>
                         </div>
