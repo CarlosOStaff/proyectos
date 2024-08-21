@@ -8,6 +8,8 @@ if (!isset($_SESSION['admin'])) {
 ?>
 
 <div class="container">
+<?php include('../../Layouts/modal.php'); ?>
+
     <h2 class="card-title text-center pt-5 fst-italic m-5">Libros disponibles</h2>
 
     <div class="row mx-auto mt-4 justify-content-center align-items-center d-flex">
@@ -26,14 +28,14 @@ if (!isset($_SESSION['admin'])) {
                                     <?php echo $row['fecha_publicacion']?></span></strong>
                             <strong><span class="fst-italic">Categoria: <?php echo $row['nombre_categoria'] ?></span></strong>
                             <div class="d-flex">
-                                <form action="editarLibro.php?>" method="GET" class="mt-3 mx-2">
+                                <form action="editarLibro.php" method="GET" class="mt-3 mx-2">
                                     <button type="submit" name="id" value="<?php echo $row['id'] ?>"
                                         class="fw-bold fst-italic btn btn-success waves-effect waves-light">
                                         <i class="far fa-edit"></i> Editar
                                     </button>
                                 </form>
-                                <form action="" method="POST" class="mt-3 mx-2">
-                                    <button type="submit" id="btnMostrarLibro"
+                                <form action="../../../Controladores/Admin/libros/eliminarLibro.php" method="POST" class="mt-3 mx-2">
+                                    <button type="submit" id="btnEliminar" name="btnEliminar" value="<?php echo $row['id'] ?>"
                                         class="fw-bold fst-italic btn btn-danger waves-effect waves-light">
                                         <i class="far fa-trash-alt"></i> Eliminar
                                     </button>
