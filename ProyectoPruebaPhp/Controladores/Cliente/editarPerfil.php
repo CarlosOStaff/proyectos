@@ -46,28 +46,47 @@ if ($_SESSION['cliente']) {
             exit();
         }
     } else {
-        $ext = pathinfo($img['name'], PATHINFO_EXTENSION);
-        // Crea el nuevo nombre de la imagen
-        $img_name = $nombre . '_' . $apellido . '.' . $ext;
-        // Define la ruta completa para la imagen
-        $img_path = $ruta_img . $img_name;
-        // Mueve la imagen al directorio
-
-        if(file_exists($ruta_img . $img_name)){
-            unlink($ruta_img . $img_name);
-            move_uploaded_file($img['tmp_name'], $img_path);
-
-            $profileUpdate = "UPDATE users SET img_perfil = '$img_name' ,nombre = '$nombre', apellido = '$apellido',ciudad_id ='$ciudad_id' ,email = '$email' WHERE id = '$user'";
-        $result_profileUpdate = $mysqli->query($profileUpdate);
-        if ($result_profileUpdate === true) {
-            $_SESSION['message'] = "Datos actualizados correctamente";
-            header('Location: ../../Vistas/Cliente/profile.php');
-            exit();
-        } else {
+        if (empty($img['name'])) {
             $_SESSION['message'] = "Error al actualizar datos";
             header('Location: ../../Vistas/Cliente/profile.php');
             exit();
-        }
+        } else {
+            $ext = pathinfo($img['name'], PATHINFO_EXTENSION);
+            // Crea el nuevo nombre de la imagen
+            $img_name = $nombre . '_' . $apellido . '_' . $email . '.' . $ext;
+            // Define la ruta completa para la imagen
+            $img_path = $ruta_img . $img_name;
+            // Mueve la imagen al directorio
+            if (file_exists($ruta_img . $img_name)) {
+                unlink($ruta_img . $img_name);
+                move_uploaded_file($img['tmp_name'], $img_path);
+
+                $profileUpdate = "UPDATE users SET img_perfil = '$img_name' ,nombre = '$nombre', apellido = '$apellido',ciudad_id ='$ciudad_id' ,email = '$email' WHERE id = '$user'";
+                $result_profileUpdate = $mysqli->query($profileUpdate);
+                if ($result_profileUpdate === true) {
+                    $_SESSION['message'] = "Datos actualizados correctamente";
+                    header('Location: ../../Vistas/Cliente/profile.php');
+                    exit();
+                } else {
+                    $_SESSION['message'] = "Error al actualizar datos";
+                    header('Location: ../../Vistas/Cliente/profile.php');
+                    exit();
+                }
+            } else {
+                move_uploaded_file($img['tmp_name'], $img_path);
+
+                $profileUpdate = "UPDATE users SET img_perfil = '$img_name' ,nombre = '$nombre', apellido = '$apellido',ciudad_id ='$ciudad_id' ,email = '$email' WHERE id = '$user'";
+                $result_profileUpdate = $mysqli->query($profileUpdate);
+                if ($result_profileUpdate === true) {
+                    $_SESSION['message'] = "Datos actualizados correctamente";
+                    header('Location: ../../Vistas/Cliente/profile.php');
+                    exit();
+                } else {
+                    $_SESSION['message'] = "Error al actualizar datos";
+                    header('Location: ../../Vistas/Cliente/profile.php');
+                    exit();
+                }
+            }
         }
     }
 } else {

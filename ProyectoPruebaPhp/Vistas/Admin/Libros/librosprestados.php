@@ -1,6 +1,10 @@
 <?php
 include('../../Layouts/menu_admin.php');
-
+if (!isset($_SESSION['admin'])) {
+    $_SESSION['message'] = 'No has iniciado sesion';
+    header('Location: ../../../Auth/login.php');
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -84,7 +84,7 @@ $user = $_SESSION['admin'];
                         <div class="avatar-lg mx-auto mb-4">
                             <i class="fas fa-user fa-3x"></i>
                         </div>
-                        <h5 class="mb-1"><a href="#" class="text-dark fst-italic">Nuevo
+                        <h5 class="mb-1"><a href="Admins/nuevoAdministrador.php" class="text-dark fst-italic">Nuevo
                                 Administrador</a></h5>
                     </div>
                 </div>
