@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION['admin'])) {
+    $_SESSION['message'] = 'No has iniciado sesion';
+    header('Location: ../Auth/login.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,17 +35,16 @@
                         <a class="nav-link text-white fw-bold" href="../index.php">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white fw-bold" href="..\..\..\..\ProyectoPruebaPhp\Vistas\Admin\usuariosActivos/usuariosActivos.php">Usuarios activos</a>
+                        <a class="nav-link text-white fw-bold" href="..\..\..\Vistas\Admin\usuariosActivos/usuariosActivos.php">Usuarios activos</a>
                     </li>
                     <li class="nav-item">
                         <a href="..\..\..\..\ProyectoPruebaPhp\Auth\logout.php" class="nav-link text-white fw-bold">Logout</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto text-center">
-                <?php
-                session_start();
-                $user = $_SESSION['admin'];
-                echo '<li class="nav-item dropdown">
+                    <?php
+                    $user = $_SESSION['admin'];
+                    echo '<li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle text-white fw-bold" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="../../Recursos/img/users/perfil/' . $user['img_perfil'] . '"
@@ -46,26 +54,26 @@
                         <li><a class="dropdown-item" href="../Cliente/profile.php">Mi cuenta</a></li>
                     </ul>
                 </li>';
-                ?>
+                    ?>
                 </ul>
             </div>
         </nav>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            function updateProfileImage() {
-                fetch('')
-                    .then(response => response.json())
-                    .then(data => {
-                        document.getElementById('profileImage').src = '../../Recursos/img/users/perfil/' + data.img_perfil;
-                    })
-                    .catch(error => console.error('Error:', error));
-            }
-            // Actualizar la imagen del perfil cada 5 segundos
-            setInterval(updateProfileImage, 5000);
-        });
-    </script>
+            document.addEventListener('DOMContentLoaded', function() {
+                function updateProfileImage() {
+                    fetch('')
+                        .then(response => response.json())
+                        .then(data => {
+                            document.getElementById('profileImage').src = '../../Recursos/img/users/perfil/' + data.img_perfil;
+                        })
+                        .catch(error => console.error('Error:', error));
+                }
+                // Actualizar la imagen del perfil cada 5 segundos
+                setInterval(updateProfileImage, 5000);
+            });
+        </script>
     </body>
 
 </html>

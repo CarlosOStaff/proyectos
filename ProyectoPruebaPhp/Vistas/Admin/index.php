@@ -111,7 +111,7 @@ $user = $_SESSION['admin'];
                             <i class="fas fa-book fa-3x"></i>
                             </span>
                         </div>
-                        <h5 class="font-size-15 mb-1"><a href="#"
+                        <h5 class="font-size-15 mb-1"><a href="Libros/nuevoLibro.php"
                                 class="text-dark fst-italic">Nuevo
                                 libro</a></h5>
                     </div>
@@ -125,7 +125,8 @@ $user = $_SESSION['admin'];
                             <i class="fas fa-chart-pie fa-3x"></i>
                             </span>
                         </div>
-                        <h5 class="font-size-15 mb-1"><a href="#" class="text-dark fst-italic">Estadisticas</a>
+                        <h5 class="font-size-15 mb-1">
+                            <a href="Admins/estadisticas.php" class="text-dark fst-italic">Estadisticas</a>
                         </h5>
                     </div>
                 </div>
@@ -134,5 +135,5 @@ $user = $_SESSION['admin'];
         </div>
     </div>
 </body>
-
+<?php include '../Layouts/footer.php'; ?>
 </html>
