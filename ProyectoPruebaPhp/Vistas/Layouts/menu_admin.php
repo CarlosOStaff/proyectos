@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../Css/menu_cliente.css">
     <link rel="stylesheet" href="../../Css/modal.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body class="d-flex flex-column vh-100 col-xl-12">
@@ -28,7 +29,6 @@
             <ul class="navbar-nav ms-auto text-center">
                 <?php
                 session_start();
-
                 if (isset($_SESSION['admin'])) {
                     $user = $_SESSION['admin'];
                     if (isset($user['nombre'])) {
@@ -53,19 +53,27 @@
         </div>
     </nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        $(document).ready(function() {
             function updateProfileImage() {
-                fetch('')
-                    .then(response => response.json())
-                    .then(data => {
-                        document.getElementById('profileImage').src = '../../Recursos/img/users/perfil/' + data.img_perfil;
-                    })
-                    .catch(error => console.error('Error:', error));
+                $.ajax({
+                    url: '../../Controladores/Admin/perfilAdmin/getProfileImage.php', // Ruta al archivo PHP que devuelve la imagen
+                    method: 'GET',
+                    dataType: 'json',
+                    success: function(data) {
+                        $('#profileImage').attr('src', '../../Recursos/img/users/perfil/' + data.img_perfil);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Error:', error);
+                    }
+                });
             }
+
             // Actualizar la imagen del perfil cada 5 segundos
             setInterval(updateProfileImage, 5000);
+
+            // Actualizar la imagen del perfil inmediatamente cuando se carga la página
+            updateProfileImage();
         });
     </script>
 </body>
