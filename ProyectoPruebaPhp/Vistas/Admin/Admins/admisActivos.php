@@ -1,6 +1,11 @@
 <?php
 include '../../Layouts/menu_admin.php';
 include '../../../Controladores/Admin/adminsactivos.php';
+if (!isset($_SESSION['admin'])) {
+    $_SESSION['message'] = 'No has iniciado sesion';
+    header('Location: ../../Auth/login.php');
+    exit();
+}
 ?>
 <div class="container">
     <h1 class="text-center p-5 fst-italic m-5">Lista de administradores activos</h1>
@@ -18,7 +23,7 @@ include '../../../Controladores/Admin/adminsactivos.php';
                         <?php endif ?>
                         <div class="mt-auto">
                             <form action="../../../Controladores/Admin/eliminaradmin.php" method="post">
-                                <button name="user_delete" value="<?php echo $row['id']?>" type="submit" class="btn btn-danger waves-effect waves-light mt-3">
+                                <button name="user_delete" value="<?php echo $row['id'] ?>" type="submit" class="btn btn-danger waves-effect waves-light mt-3">
                                     <i class="fas fa-trash"></i> Eliminar
                                 </button>
                             </form>

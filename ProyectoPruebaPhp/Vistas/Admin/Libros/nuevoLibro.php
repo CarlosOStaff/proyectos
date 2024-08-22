@@ -2,7 +2,12 @@
 require_once '../../../BD/conexion.php';
 include '../../Layouts/menu_admin.php';
 include '../../../Controladores/Catalogos/etiquetas.php';
-include '../../../Controladores/Catalogos/categorias.php'
+include '../../../Controladores/Catalogos/categorias.php';
+if (!isset($_SESSION['admin'])) {
+    $_SESSION['message'] = 'No has iniciado sesion';
+    header('Location: ../../../Auth/login.php');
+    exit();
+}
 ?>
 
 <div class="p-5">
@@ -44,8 +49,8 @@ include '../../../Controladores/Catalogos/categorias.php'
                                         class="form-label fw-bold fst-italic">Etiquetas</label>
                                     <select id="formrow-inputState" required name="etiqueta_id" class="form-select">
                                         <option> Seleccionar...</option>
-                                            <?php while($row = $result_etiquetas->fetch_assoc()): ?>
-                                        <option name="etiqueta_id" value="<?php echo $row['id']?>"><?php echo $row['nombre_etiqueta']?> </option>
+                                        <?php while ($row = $result_etiquetas->fetch_assoc()): ?>
+                                            <option name="etiqueta_id" value="<?php echo $row['id'] ?>"><?php echo $row['nombre_etiqueta'] ?> </option>
                                         <?php endwhile ?>
                                     </select>
                                 </div>
@@ -59,7 +64,7 @@ include '../../../Controladores/Catalogos/categorias.php'
                                 <select id="formrow-inputState" required name="categoria_id" class="form-select">
                                     <option> Seleccionar...</option>
                                     <?php while ($row2 = $result->fetch_assoc()): ?>
-                                    <option name="categoria_id" value="<?php echo $row2['id'] ?>"><?php echo $row2['nombre_categoria'] ?></option>
+                                        <option name="categoria_id" value="<?php echo $row2['id'] ?>"><?php echo $row2['nombre_categoria'] ?></option>
                                     <?php endwhile ?>
                                 </select>
                             </div>
@@ -77,7 +82,7 @@ include '../../../Controladores/Catalogos/categorias.php'
                 </form>
             </div>
         </div>
-<?php include '../../Layouts/modal.php'; ?>
+        <?php include '../../Layouts/modal.php'; ?>
     </div>
 </div>
 <?php include '../../Layouts/footer.php'; ?>

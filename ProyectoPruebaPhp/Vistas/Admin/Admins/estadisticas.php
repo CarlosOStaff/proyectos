@@ -2,6 +2,11 @@
 require_once '../../../BD/conexion.php';
 include '../../Layouts/menu_admin.php';
 include '../../../Controladores/Admin/estadisticas.php';
+if (!isset($_SESSION['admin'])) {
+    $_SESSION['message'] = 'No has iniciado sesion';
+    header('Location: ../../../Auth/login.php');
+    exit();
+}
 ?>
 <div class="container py-5">
     <div class="row p-3 m-5">
