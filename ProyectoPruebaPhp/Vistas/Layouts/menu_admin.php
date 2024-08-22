@@ -38,7 +38,7 @@ if (!isset($_SESSION['admin'])) {
                         <a class="nav-link text-white fw-bold" href="..\..\..\Vistas\Admin\usuariosActivos/usuariosActivos.php">Usuarios activos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="..\..\..\..\ProyectoPruebaPhp\Auth\logout.php" class="nav-link text-white fw-bold">Logout</a>
+                        <a href="..\..\..\..\Auth\logout.php" class="nav-link text-white fw-bold">Logout</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto text-center">
