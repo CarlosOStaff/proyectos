@@ -68,7 +68,7 @@ if ($password) {
     }
 } else {
     if (empty($img['tmp_name'])) {
-        $profileUpdate = "UPDATE users SET nombre = '$nombre', apellido = '$apellido',ciudad_id ='$ciudad_id' ,email = '$email', password = '$password' WHERE id = '$user'";
+        $profileUpdate = "UPDATE users SET nombre = '$nombre', apellido = '$apellido',ciudad_id ='$ciudad_id' ,email = '$email' WHERE id = '$user'";
         $result_profileUpdate = $mysqli->query($profileUpdate);
         if ($result_profileUpdate) {
             $_SESSION['message'] = "Datos actualizados correctamente";
@@ -86,7 +86,7 @@ if ($password) {
         if (file_exists($ruta_img . $img_name)) {
             unlink($ruta_img . $img_name);
             move_uploaded_file($img['tmp_name'], $img_path);
-            $profileUpdate = "UPDATE users SET img_perfil = '$img_name' ,nombre = '$nombre', apellido = '$apellido',ciudad_id ='$ciudad_id' ,email = '$email', password = '$password' WHERE id = '$user'";
+            $profileUpdate = "UPDATE users SET img_perfil = '$img_name' ,nombre = '$nombre', apellido = '$apellido',ciudad_id ='$ciudad_id' ,email = '$email' WHERE id = '$user'";
             $result_profileUpdate = $mysqli->query($profileUpdate);
             if ($result_profileUpdate) {
                 $_SESSION['message'] = "Datos actualizados correctamente";
@@ -99,7 +99,7 @@ if ($password) {
             }
         } else {
             move_uploaded_file($img['tmp_name'], $img_path);
-            $profileUpdate = "UPDATE users SET img_perfil = '$img_name' ,nombre = '$nombre', apellido = '$apellido',ciudad_id ='$ciudad_id' ,email = '$email', password = '$password' WHERE id = '$user'";
+            $profileUpdate = "UPDATE users SET img_perfil = '$img_name' ,nombre = '$nombre', apellido = '$apellido',ciudad_id ='$ciudad_id' ,email = '$email' WHERE id = '$user'";
             $result_profileUpdate = $mysqli->query($profileUpdate);
             if ($result_profileUpdate) {
                 $_SESSION['message'] = "Datos actualizados correctamente";

@@ -41,7 +41,7 @@ if ($result->num_rows > 0) {
     <h3 style="font-style: italic; font-weight: bold; color: black;">Hola, este es un correo generado para la recuperación de tu contraseña.</h3>
     <p style="font-style: italic; color: #555;">Sigue los pasos a continuación para poder cambiar tu contraseña:</p>
     <p style="color: #555;">Haz clic en el siguiente enlace:</p>
-    <a href="http://localhost:3000/ProyectoPruebaPhp/Vistas/Auth/cambiarpassword.php?email='.$email.'&token='.$password_reset_token.'" style="display: inline-block; padding: 1vw 1.5vw; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px;">Cambiar contraseña</a>
+    <a href="http://localhost:3000/Vistas/Auth/cambiarpassword.php?email='.$email.'&token='.$password_reset_token.'" style="display: inline-block; padding: 1vw 1.5vw; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px;">Cambiar contraseña</a>
 </div>';
         $mail->send();
         $_SESSION['message'] = 'Correo enviado';

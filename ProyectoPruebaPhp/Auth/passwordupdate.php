@@ -11,7 +11,6 @@ if (isset($_POST['token']) && isset($_POST['email'])) {
     $query = "SELECT * FROM users WHERE email = '$email' AND password_reset_token = '$token'";
     $result = $mysqli->query($query);
     $row = $result->fetch_array(MYSQLI_ASSOC);
-    var_dump($email);
     if ($result->num_rows > 0) {
         $password = password_hash($password, PASSWORD_BCRYPT);
         $passwordUpdate = "UPDATE users SET password = '$password' WHERE email = '$email' AND password_reset_token = '$token'";

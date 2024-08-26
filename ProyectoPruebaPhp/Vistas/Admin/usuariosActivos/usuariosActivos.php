@@ -60,8 +60,9 @@ if (!isset($_SESSION['admin'])) {
                         <!-- end table-responsive -->
                     </div>
                 </div>
-                <?php include('../../Layouts/modal.php') ?>
             </div>
         </div>
 </div>
+<?php include('../../Layouts/modal.php') ?>
+
 <?php include('../../Layouts/footer.php') ?>

@@ -31,3 +31,4 @@ include('../../Controladores/Cliente/misLibros.php');
     </div>
 </div>
 <?php include('../Layouts/modal.php')?>
+<?php include '../Layouts/footer.php'; ?>
