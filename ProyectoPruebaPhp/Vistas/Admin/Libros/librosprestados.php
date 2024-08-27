@@ -16,7 +16,7 @@ if (!isset($_SESSION['admin'])) {
 
 <body>
     <div class="container p-5">
-        <h2 class="card-title text-center mt-4 fst-italic">Libros que se han prestado</h2>
+        <h2 class="card-title text-center fst-italic pt-5 pb-2">Libros que se han prestado</h2>
         <div class="row mx-auto mt-4 justify-content-center align-items-center">
             <?php include('../../../Controladores/Admin/libros/librosprestados.php');
             while ($row = $result->fetch_assoc()):
