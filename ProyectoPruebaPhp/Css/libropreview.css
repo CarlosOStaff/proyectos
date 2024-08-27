@@ -1,5 +1,5 @@
  /* Estilo para el modal */
- .modal {
+.modal {
     display: none; /* Ocultar el modal por defecto */
     position: fixed;
     z-index: 1;
@@ -17,6 +17,7 @@
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    pointer-events: auto; /* Asegúrate de que los eventos del puntero estén habilitados */
 }
 .close {
     color: #aaa;
