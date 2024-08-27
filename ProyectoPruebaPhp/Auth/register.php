@@ -56,8 +56,7 @@ if ($result->num_rows > 0) {
                             <a href="http://localhost:3000/Controladores/confirmarCorreo.php?email=' . $email . '&token=' . $validated_token . '" style="display: inline-block; padding: 1vw 1.5vw; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px;">Confirmar cuenta</a>
                         </div>';
             $mail->send();
-            $_SESSION['message'] = 'Te has registrado con exito.
-            Se ha enviado un correo de verificacion.';
+            $_SESSION['message'] = 'Te has registrado con exito. Se ha enviado un correo de verificacion.';
             header("Location: ../Vistas/Auth/register.php");
             exit();
         } catch (Exception $e) {

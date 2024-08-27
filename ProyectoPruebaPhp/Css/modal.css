@@ -9,15 +9,16 @@
       overflow: auto;
       background-color: rgb(0, 0, 0);
       background-color: rgba(0, 0, 0, 0.4);
-      padding-top: 60px;
+      padding-top: 5vw;
     }
 
     .modal-content-message {
       background-color: #fefefe;
       margin: 5% auto;
-      padding: 20px;
+      padding: 3vw;
       border: 1px solid #888;
       width: 40%;
+      border-radius: 1vw;
     }
 
     .close {
