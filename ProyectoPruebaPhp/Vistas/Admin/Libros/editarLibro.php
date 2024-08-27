@@ -16,7 +16,7 @@ if (!isset($_SESSION['admin'])) {
     <link rel="stylesheet" href="../../../Css/modal.css">
 </head>
 <body>
-<div class="card-body" style="padding-left:3vw;padding-right:3vw;padding-top:3vw;">
+<div class="card-body pt-5 pb-5" style="padding-left:3vw;padding-right:3vw;padding-top:3vw;">
     <h4 class="card-title mt-4 mb-4">Actualiza la informacion necesaria del libro</h4>
     <?php
     include('../../../Controladores/Admin/libros/editarLibros.php');

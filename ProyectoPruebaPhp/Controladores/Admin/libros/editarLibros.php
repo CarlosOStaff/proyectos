@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once('../../../BD/conexion.php');
 $libro = $_GET['id'];
 

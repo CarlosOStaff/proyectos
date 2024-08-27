@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('../../../BD/conexion.php');
 $id = intval($_POST['id']);
 $titulo_libro = $_POST['titulo_libro'];
@@ -18,7 +19,7 @@ if (empty($imagen['tmp_name'])) {
         WHERE id = '$id'";
     $libro_result = $mysqli->query($libro);
     if ($libro_result) {
-        $_SESSION['message'] = "Datos actualizados correctamente";
+        $_SESSION['message'] = "Los datos del libro" . $row['titulo_libro'] . " se han actualizado";
         header("Location: ../../../Vistas/Admin/Libros/libros.php");
         exit();
     } else {
@@ -41,7 +42,7 @@ if (empty($imagen['tmp_name'])) {
             WHERE id = '$id'";
         $libro_img_result = $mysqli->query($libro_img);
         if ($libro_img_result) {
-            $_SESSION['message'] = "Datos actualizados correctamente";
+            $_SESSION['message'] = "Los datos del libro" . $row['titulo_libro'] . " se han actualizado";
             header("Location: ../../../Vistas/Admin/Libros/libros.php");
             exit();
         } else {
@@ -49,7 +50,7 @@ if (empty($imagen['tmp_name'])) {
             header("Location: ../../../Vistas/Admin/Libros/libros.php");
             exit();
         }
-    }else{
+    } else {
         move_uploaded_file($imagen['tmp_name'], $img_path);
         $libro_img = "UPDATE books SET imagen = '$img_name',titulo_libro = '$titulo_libro', 
             descripcion = '$descripcion', contenido = '$contenido', 
@@ -58,7 +59,7 @@ if (empty($imagen['tmp_name'])) {
             WHERE id = '$id'";
         $libro_img_result = $mysqli->query($libro_img);
         if ($libro_img_result) {
-            $_SESSION['message'] = "Datos actualizados correctamente";
+            $_SESSION['message'] = "Los datos del libro" . $row['titulo_libro'] . " se han actualizado";
             header("Location: ../../../Vistas/Admin/Libros/libros.php");
             exit();
         } else {
