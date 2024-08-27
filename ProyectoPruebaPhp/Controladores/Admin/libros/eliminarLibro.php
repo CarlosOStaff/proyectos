@@ -1,5 +1,7 @@
 <?php
+session_start();
 require_once('../../../BD/conexion.php');
+
 $libroId = $_POST['btnEliminar'];
 
 $query = "DELETE FROM books WHERE id = '$libroId'";

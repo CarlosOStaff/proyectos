@@ -19,6 +19,7 @@ if (!isset($_SESSION['admin'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuevo Administrador</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../Css/modal.css">
 </head>
 
 <body>
@@ -32,7 +33,7 @@ if (!isset($_SESSION['admin'])) {
                             <div class="col-sm-3 text-center">
                                 <!-- Vista previa de la nueva imagen -->
                                 <img id="img-preview" class="img-fluid rounded mt-2 mb-4 mx-auto"
-                                    src="../../../Recursos/img/users/users/perfil/default_img.png" alt="Vista previa de la nueva imagen"
+                                    src="../../../Recursos/img/users/perfil/default_img.png" alt="Vista previa de la nueva imagen"
                                     style="display: block; max-height: 200px;">
                             </div>
                             <div class="col-sm-9">
@@ -77,9 +78,9 @@ if (!isset($_SESSION['admin'])) {
                             <div class="col-sm-9">
                                 <select name="ciudad_id" id="ciudad_id" required class="form-select">
                                     <option value="">Selecciona una ciudad</option>
-                                    <?php while($row = $result->fetch_assoc()): ?>
-                                        <option value="<?php echo $row['id']?>"><?php echo $row['nombre_ciudad'] ?></option>;
-                                    <?php endwhile ?>  
+                                    <?php while ($row = $result->fetch_assoc()): ?>
+                                        <option value="<?php echo $row['id'] ?>"><?php echo $row['nombre_ciudad'] ?></option>;
+                                    <?php endwhile ?>
                                 </select>
                             </div>
                         </div>
@@ -95,7 +96,8 @@ if (!isset($_SESSION['admin'])) {
             <!-- end card -->
         </div>
     </div>
-<?php include '../../Layouts/modal.php' ?>
+    <?php include '../../Layouts/modal.php'; ?>
+
     <script defer type="text/javascript">
         function validarPasswords() {
             var pass = document.getElementById("password").value;
@@ -128,7 +130,7 @@ if (!isset($_SESSION['admin'])) {
 
                 reader.readAsDataURL(file);
             } else {
-                imgPreview.src = '../../../Recursos/img/users/users/perfil/default_img.png'; // Vuelve a la imagen por defecto si no se selecciona ninguna
+                imgPreview.src = '../../../Recursos/img/users/perfil/default_img.png'; // Vuelve a la imagen por defecto si no se selecciona ninguna
                 imgPreview.style.display = 'block';
             }
         }

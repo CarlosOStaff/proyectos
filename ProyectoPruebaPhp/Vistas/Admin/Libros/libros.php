@@ -14,6 +14,7 @@ if (!isset($_SESSION['admin'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../../../Css/modal.css">
 
 </head>
 
@@ -27,7 +28,7 @@ if (!isset($_SESSION['admin'])) {
             include('../../../Controladores/Admin/libros/libros.php');
             $books = [];
             while ($row = $result->fetch_assoc()):
-                $books[] = $row; // Guardar los libros en un array
+                $books[] = $row;
             ?>
                 <div class="col-lg-6">
                     <div class="col-xl-12 shadow-lg p-3 mb-5 mx-2 h-50 mw-100">
@@ -67,7 +68,6 @@ if (!isset($_SESSION['admin'])) {
             <?php endwhile ?>
         </div>
     </div>
-
     <div class="modal fade" id="bookModal" tabindex="-1" role="dialog" aria-labelledby="bookModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -105,6 +105,7 @@ if (!isset($_SESSION['admin'])) {
     </script>
     </div>
     </div>
+    <?php include '../../Layouts/modal.php'; ?>
 
     <?php include('../../Layouts/footer.php'); ?>
 </body>
