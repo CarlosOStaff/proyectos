@@ -33,8 +33,8 @@
                 echo '<li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle text-white fw-bold" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="../../Recursos/img/users/perfil/' . $user['img_perfil'] . '"
-                            class="mh-25 mw-25 h-25 w-25 mx-1 px-3 rounded-circle" id="profileImage">' . $user['nombre'] . '
+                        <img src="http://localhost:3000/Recursos/img/users/perfil/' . ($user['img_perfil']) . '"
+                                    class="mh-25 mw-25 h-25 w-25 mx-1 px-3 rounded-circle" id="profileImage">' . $user['nombre'] . '
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="../Cliente/profile.php">Mi cuenta</a></li>
@@ -45,17 +45,26 @@
         </div>
     </nav>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        $(document).ready(function() {
             function updateProfileImage() {
-                fetch('')
-                    .then(response => response.json())
-                    .then(data => {
-                        document.getElementById('profileImage').src = '../../Recursos/img/users/perfil/' + data.img_perfil;
-                    })
-                    .catch(error => console.error('Error:', error));
+                $.ajax({
+                    url: '../../Controladores/Admin/perfilAdmin/getProfileImage.php', // Ruta al archivo PHP que devuelve la imagen
+                    method: 'GET',
+                    dataType: 'json',
+                    success: function(data) {
+                        $('#profileImage').attr('src', 'http://localhost:3000/Recursos/img/users/perfil/' + data.img_perfil);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Error:', error);
+                    }
+                });
             }
+
             // Actualizar la imagen del perfil cada 5 segundos
             setInterval(updateProfileImage, 5000);
+
+            // Actualizar la imagen del perfil inmediatamente cuando se carga la página
+            updateProfileImage();
         });
     </script>
 </body>

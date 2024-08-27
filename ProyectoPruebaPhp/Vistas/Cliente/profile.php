@@ -23,7 +23,7 @@ if (!isset($_SESSION['cliente'])) {
 </head>
 
 <body>
-    <div class="container mt-4">
+    <div class="container mt-4 mb-4">
         <div class="row justify-content-center">
             <div class="col-xl-6">
                 <div class="card">
@@ -145,5 +145,6 @@ if (!isset($_SESSION['cliente'])) {
         }
     </script>
 </body>
-
+<?php include '../Layouts/modal.php'; ?>
+<?php include '../Layouts/footer.php'; ?>
 </html>
