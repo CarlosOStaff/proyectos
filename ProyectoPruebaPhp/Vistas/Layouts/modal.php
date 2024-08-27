@@ -7,8 +7,8 @@
 </head>
 
 <body>
-    <div id="myModal" class="modal">
-        <div class="modal-content">
+    <div id="myModal" class="modalmessage">
+        <div class="modal-content-message">
             <span class="close">&times;</span>
             <p id="modalMessage"><?php echo isset($_SESSION['message']) ? $_SESSION['message'] : ''; ?></p>
         </div>

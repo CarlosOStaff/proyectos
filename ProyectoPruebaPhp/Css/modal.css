@@ -1,4 +1,4 @@
-    .modal {
+    .modalmessage {
       display: none;
       position: fixed;
       z-index: 1;
@@ -12,7 +12,7 @@
       padding-top: 60px;
     }
 
-    .modal-content {
+    .modal-content-message {
       background-color: #fefefe;
       margin: 5% auto;
       padding: 20px;

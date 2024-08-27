@@ -1,5 +1,7 @@
 <?php
+session_start();
 require_once '../../../BD/conexion.php';
+
 $titulo_libro = $_POST['titulo_libro'];
 $descripcion = $_POST['descripcion'];
 $contenido = $_POST['contenido'];
