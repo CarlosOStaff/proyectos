@@ -65,7 +65,7 @@ if ($result->num_rows > 0) {
                         </div>';
             $mail->send();
 
-            $_SESSION['message'] = 'Correo enviado';
+            $_SESSION['message'] = 'Nuevo Administrador creado, El correo de verificacion se ha enviado';
             header("Location: ../../Vistas/Admin/Admins/nuevoAdministrador.php");
             exit();
         } catch (Exception $e) {
