@@ -25,7 +25,7 @@ if ($result->num_rows > 0) {
     exit();
 } else {
     $ext = pathinfo($img['name'], PATHINFO_EXTENSION);
-    $img_name = $nombre . '_' . $apellido .'_'.$email. '.' . $ext;
+    $img_name = $nombre . '_' . $apellido . '_' . $email . '.' . $ext;
     $img_path = $ruta_img . $img_name;
     move_uploaded_file($img['tmp_name'], $img_path);
 
@@ -63,17 +63,17 @@ if ($result->num_rows > 0) {
                         </div>';
             $mail->send();
             $_SESSION['message'] = 'Correo enviado';
-            header("Location: ../Vistas/Auth/register.php");
+            header("Location: ../../Vistas/Admin/Admins/nuevoAdministrador.php");
             exit();
         } catch (Exception $e) {
             error_log("Message could not be sent. Mailer Error: {$mail->ErrorInfo}");
             $_SESSION['message'] = 'No se pudo enviar el correo';
-            header("Location: ../Vistas/Admin/Admins/nuevoAdministrador.php");
+            header("Location: ../../Vistas/Admin/Admins/nuevoAdministrador.php");
             exit();
         }
     } else {
         $_SESSION['message'] = 'El correo ya existe';
-        header("Location: ../Vistas/Admin/Admins/nuevoAdministrador.php");
+        header("Location: ../../Vistas/Admin/Admins/nuevoAdministrador.php");
         exit();
     }
 }

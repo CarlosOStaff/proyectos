@@ -105,7 +105,6 @@ if (!isset($_SESSION['admin'])) {
         </div>
     </div>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-
     <?php include('../../Layouts/footer.php'); ?>
 </body>
 

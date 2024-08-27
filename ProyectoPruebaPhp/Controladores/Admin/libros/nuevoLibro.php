@@ -25,13 +25,15 @@ if ($result) {
 
     if ($resulttag) {
         $_SESSION['message'] = "Se han guardado los datos correctamente";
+        // Redireccionar
+        header("Location: ../../../Vistas/Admin/Libros/nuevoLibro.php");
+        exit();
     } else {
         $_SESSION['message'] = "Error al guardar la etiqueta";
+        // Redireccionar
+        header("Location: ../../../Vistas/Admin/Libros/nuevoLibro.php");
+        exit();
     }
-
-    // Redireccionar
-    header("Location: ../../../Vistas/Admin/Libros/nuevoLibro.php");
-    exit();
 } else {
     $_SESSION['message'] = "Error al guardar el libro";
     header("Location: ../../../Vistas/Admin/Libros/nuevoLibro.php");

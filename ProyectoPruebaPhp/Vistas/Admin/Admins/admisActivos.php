@@ -7,6 +7,14 @@ if (!isset($_SESSION['admin'])) {
     exit();
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../Css/modal.css">
+</head>
+<body>
 <div class="container">
     <h1 class="text-center p-5 fst-italic m-5">Lista de administradores activos</h1>
     <div class="row mx-auto mt-4 justify-content-center align-items-stretch">
@@ -34,4 +42,7 @@ if (!isset($_SESSION['admin'])) {
         <?php endwhile ?>
     </div>
 </div>
-<?php include '../../Layouts/footer.php' ?>
+<?php include '../../Layouts/modal.php'; ?>
+<?php include '../../Layouts/footer.php'; ?>
+</body>
+</html>

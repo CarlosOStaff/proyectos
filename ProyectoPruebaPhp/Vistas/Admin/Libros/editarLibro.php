@@ -8,6 +8,14 @@ if (!isset($_SESSION['admin'])) {
 }
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../Css/modal.css">
+</head>
+<body>
 <div class="card-body" style="padding-left:3vw;padding-right:3vw;padding-top:3vw;">
     <h4 class="card-title mt-4 mb-4">Actualiza la informacion necesaria del libro</h4>
     <?php
@@ -69,3 +77,5 @@ if (!isset($_SESSION['admin'])) {
     <?php include('../../Layouts/modal.php'); ?>
 </div>
 <?php include('../../Layouts/footer.php') ?>
+</body>
+</html>
