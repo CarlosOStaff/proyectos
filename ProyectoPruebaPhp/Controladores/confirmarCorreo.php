@@ -7,7 +7,6 @@ $email = $_REQUEST['email'];
 
 $query = "SELECT * FROM users WHERE email = '$email' AND validated_token = '$token'";
 $result = $mysqli->query($query);
-
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
 
