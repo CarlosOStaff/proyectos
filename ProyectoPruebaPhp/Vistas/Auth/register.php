@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="./css/app.css" />
+    <link rel="stylesheet" href="../../Css/modal.css" />
 </head>
 
 <body>
@@ -16,7 +16,6 @@
         <h2 class="text-center fst-italic fw-bold mt-3 mb-3">Registrate para poder ver nuestros catalogos de libros</h2>
         <div class="row justify-content-center align-items-center">
             <div class="col-xl-6 shadow-lg mt-4 p-4 rounded-4">
-                <?php include('../Layouts/modal.php'); ?>
 
                 <div class="">
                     <a href="..\Home\index.php">Volver al inicio</a>
@@ -79,13 +78,10 @@
                                         $result = $mysqli->query($query);
 
                                         if ($result === false) {
-                                            // Mostrar mensaje de error en caso de fallo en la consulta
                                             echo '<option value="">Error en la consulta: ' . htmlspecialchars($mysqli->error) . '</option>';
                                         } elseif ($result->num_rows === 0) {
-                                            // Mostrar mensaje si no se encuentran resultados
                                             echo '<option value="">No se encontraron ciudades</option>';
                                         } else {
-                                            // Mostrar opciones si se encuentran resultados
                                             while ($row = $result->fetch_assoc()) {
                                                 echo '<option value="' . htmlspecialchars($row['id']) . '">' . htmlspecialchars($row['nombre_ciudad']) . '</option>';
                                             }
@@ -122,6 +118,8 @@
             </div>
         </div>
     </div>
+    <?php include '../Layouts/modal.php'; ?>
+
 </body>
 
 </html>

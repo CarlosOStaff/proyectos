@@ -20,7 +20,7 @@ $validated_token = base64_encode(random_bytes(20));
 
 $query = "SELECT * FROM users WHERE email = '$email'";
 $result = $mysqli->query($query);
-if (!$result) {
+if ($result->num_rows > 0) {
     $_SESSION['message'] = 'EL correo ya se encuentra registrado';
     header("Location: ../Vistas/Auth/register.php");
     exit();
@@ -53,10 +53,11 @@ if (!$result) {
                             <h3 style="font-style:italic; font-weight:bold; color:black;">Hola, este es un correo generado para la verificación de tu cuenta en nuestra librería.</h3>
                             <p style="font-style:italic; color: #555;">Sigue los pasos a continuación.</p>
                             <p style="color: #555;">Haz clic en el siguiente enlace:</p>
-                            <a href="http://localhost:3000/Controladores/confirmarCorreo.php?email='.$email.'&token='.$validated_token.'" style="display: inline-block; padding: 1vw 1.5vw; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px;">Confirmar cuenta</a>
+                            <a href="http://localhost:3000/Controladores/confirmarCorreo.php?email=' . $email . '&token=' . $validated_token . '" style="display: inline-block; padding: 1vw 1.5vw; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px;">Confirmar cuenta</a>
                         </div>';
             $mail->send();
-            $_SESSION['message'] = 'Correo enviado';
+            $_SESSION['message'] = 'Te has registrado con exito.
+            Se ha enviado un correo de verificacion.';
             header("Location: ../Vistas/Auth/register.php");
             exit();
         } catch (Exception $e) {

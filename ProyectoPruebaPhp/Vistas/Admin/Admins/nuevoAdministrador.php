@@ -136,7 +136,7 @@ if (!isset($_SESSION['admin'])) {
         }
     </script>
 
-    <?php include('../../Layouts/footer.php'); ?>
 </body>
+<?php include '../../Layouts/footer.php'; ?>
 
 </html>

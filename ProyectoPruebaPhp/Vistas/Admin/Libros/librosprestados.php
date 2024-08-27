@@ -45,5 +45,5 @@ if (!isset($_SESSION['admin'])) {
         </div>
     </div>
 </body>
-
+<?php include '../../Layouts/footer.php'; ?>
 </html>

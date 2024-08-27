@@ -94,7 +94,6 @@ if (!isset($_SESSION['admin'])) {
             <?php include '../../Layouts/modal.php'; ?>
         </div>
     </div>
-    <?php include '../../Layouts/footer.php'; ?>
 </body>
-
+<?php include '../../Layouts/footer.php'; ?>
 </html>

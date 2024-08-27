@@ -76,6 +76,5 @@ if (!isset($_SESSION['admin'])) {
     <?php include '../../Layouts/modal.php'; ?>
 
 </body>
-<footer><?php include('../../Layouts/footer.php') ?></footer>
-
+<?php include('../../Layouts/footer.php') ?>
 </html>
