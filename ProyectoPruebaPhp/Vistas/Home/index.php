@@ -29,5 +29,5 @@ include('..\Layouts\menu_inicio.php');
 
 </body>
 <?php
-include('..\Layouts\footer.php');
+include '..\Layouts\footer.php';
 ?>
