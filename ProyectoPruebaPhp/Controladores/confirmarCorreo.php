@@ -13,7 +13,6 @@ if ($result->num_rows > 0) {
     $now = new DateTime();
     $now_at = $now->format('Y-m-d H:i:s');
 
-
     $email_verified = "UPDATE users SET email_verified_at = '$now_at', validated_token = NULL WHERE email = '$email'";
     $result_email = $mysqli->query($email_verified);
 

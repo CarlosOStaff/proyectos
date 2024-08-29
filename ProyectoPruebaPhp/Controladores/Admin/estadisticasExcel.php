@@ -17,13 +17,10 @@ $excel = "SELECT c.nombre_categoria, COUNT(b.id)
             GROUP BY c.nombre_categoria";
 $result = $mysqli->query($excel);
 
-// Crea una nueva instancia de Spreadsheet
 $spreadsheet = new Spreadsheet();
 $sheet = $spreadsheet->getActiveSheet();
 
-// Agrega el titulo a la hoja de excel
 $sheet->setTitle('Libros por Categorías');
-// Agrega datos a la hoja
 $sheet->setCellValue('A1', 'Categorías');
 $sheet->setCellValue('B1', 'Libros por Categoría');
 $fila = 2;
@@ -38,7 +35,7 @@ while ($row = $result->fetch_assoc()) {
 // Aplica el filtro automático solo a la columna A
 $lastRow = $sheet->getHighestRow(); // Obtiene la última fila con datos
 $sheet->setAutoFilter('A1:A' . $lastRow); // Aplica filtro solo en la columna A
-// Estilo de fondo
+
 // Aplicar estilo a la fila de encabezado
 $sheet->getStyle('A1:B1')->applyFromArray([
     'font' => [
@@ -47,7 +44,7 @@ $sheet->getStyle('A1:B1')->applyFromArray([
     ],
     'fill' => [
         'fillType' => Fill::FILL_SOLID,
-        'startColor' => ['rgb' => '0f0f0f'] // Fondo amarillo
+        'startColor' => ['rgb' => '0f0f0f']
     ],
     'alignment' => [
         'horizontal' => Alignment::HORIZONTAL_CENTER,
@@ -61,10 +58,8 @@ $sheet->getStyle('A2:B' . $lastRow)->applyFromArray([
     ]
 ]);
 
-// Crea un escritor Xlsx para el archivo
 $writer = new Xlsx($spreadsheet);
 
-// Establece el nombre del archivo a descargar
 $filename = 'Libros por Categorías.xlsx';
 
 // Establece las cabeceras HTTP para descargar el archivo
@@ -72,6 +67,5 @@ header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetm
 header('Content-Disposition: attachment;filename="' . $filename . '"');
 header('Cache-Control: max-age=0');
 
-// Enviar el archivo al navegador
 $writer->save('php://output');
 exit;

@@ -35,12 +35,10 @@ if (!isset($_SESSION['admin'])) {
                                 <p class="">Usuario que presto el libro: <strong><?php echo $row['nombre_del_usuario']?></strong></p>
                             </div>
                         </div>
-                        <!-- end card -->
                     </div>
                 </div>
             </div>
             <?php endwhile ?>
-            <!-- end col -->
         </div>
     </div>
 </body>

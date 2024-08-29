@@ -18,7 +18,6 @@ if (!isset($_SESSION['cliente'])) {
     <title>Proyecto - Librería PHP</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Include FontAwesome for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 
@@ -34,7 +33,6 @@ if (!isset($_SESSION['cliente'])) {
                                 <label for="img_perfil" class="form-label fst-italic fw-bold">
                                     Selecciona una imagen de perfil
                                 </label>
-                                <!-- Vista previa de la imagen actual -->
                                 <?php if (!empty($user['img_perfil'])): ?>
                                     <img id="current-img" class="img-fluid rounded mt-2 mb-4 mx-auto h-50 w-25"
                                         src="../../Recursos/img/users/perfil/<?php echo htmlspecialchars($user['img_perfil']); ?>"
@@ -42,7 +40,6 @@ if (!isset($_SESSION['cliente'])) {
                                 <?php else: ?>
                                     <p>No hay imagen de perfil</p>
                                 <?php endif; ?>
-                                <!-- Vista previa de la nueva imagen -->
                                 <img id="img-preview" class="img-fluid rounded mt-2 mb-4 mx-auto h-50 w-25"
                                     src="" alt="Vista previa de la nueva imagen" style="display: none;">
                                 <input class="form-control" id="img_perfil" name="img_perfil" type="file"
@@ -111,9 +108,7 @@ if (!isset($_SESSION['cliente'])) {
                             </div>
                         </form>
                     </div>
-                    <!-- end card body -->
                 </div>
-                <!-- end card -->
             </div>
         </div>
     </div>
@@ -127,7 +122,6 @@ if (!isset($_SESSION['cliente'])) {
             if (file) {
                 const reader = new FileReader();
                 reader.onload = function(e) {
-                    // Hide the current image if a new file is selected
                     if (currentImg) {
                         currentImg.style.display = 'none';
                     }

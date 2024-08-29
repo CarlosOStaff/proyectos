@@ -72,7 +72,8 @@ if (!isset($_SESSION['admin'])) {
                 </div>
                 <br>
                 <div>
-                    <button type="submit" name="id" value="<?php echo $row['id'] ?>" class="btn btn-primary w-md">Guardar</button>
+                    <button type="submit" name="id" value="<?php echo $row['id'] ?>" class="btn btn-primary w-md d-flex">
+                        <i class="fas fa-save mt-1 mx-1"></i>Guardar</button>
                 </div>
             </form>
         <?php endwhile ?>

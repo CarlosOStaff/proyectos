@@ -67,7 +67,7 @@ if (!isset($_SESSION['admin'])) {
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-8">
+                            <div class="col-lg-6">
                                 <div class="mb-3">
                                     <label for="formrow-inputState" class="form-label fw-bold fst-italic">Categoria</label>
                                     <select id="formrow-inputState" required name="categoria_id" class="form-select">
@@ -78,14 +78,15 @@ if (!isset($_SESSION['admin'])) {
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-lg-8">
+                            <div class="col-lg-6">
                                 <div class="mb-3">
                                     <label for="formrow-inputState" class="form-label fw-bold fst-italic">Imagen</label>
                                     <input class="form-control" required type="file" id="imagen" name="imagen">
                                 </div>
                             </div>
                             <div>
-                                <button type="submit" class="btn btn-primary w-md fw-bold fst-italic">Guardar</button>
+                                <button type="submit" class="btn btn-primary w-md fw-bold fst-italic">
+                                    <i class="fas fa-save mx-1"></i>Guardar</button>
                             </div>
                         </div>
                     </form>
@@ -96,4 +97,5 @@ if (!isset($_SESSION['admin'])) {
     </div>
 </body>
 <?php include '../../Layouts/footer.php'; ?>
+
 </html>

@@ -3,7 +3,6 @@ if (isset($_SESSION['cliente'])) {
     $user = $_SESSION['cliente'];
     if (isset($user['id'])) {
         $userId = $user['id'];
-        // Asume que $mysqli ya está definido y conectado
         $query = "SELECT s.id, s.libro_id, s.fecha_prestamo, b.imagen, b.id,
                             b.titulo_libro, b.descripcion, ct.nombre_categoria 
                             FROM loans s 

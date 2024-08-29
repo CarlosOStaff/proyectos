@@ -58,9 +58,9 @@
 
             if (pass !== repass) {
                 alert("Las contraseñas no coinciden");
-                return false; // Evita el envío del formulario
+                return false;
             }
-            return true; // Permite el envío del formulario
+            return true;
         }
     </script>
 </body>

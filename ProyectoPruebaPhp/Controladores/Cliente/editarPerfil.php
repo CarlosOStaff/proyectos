@@ -19,11 +19,8 @@ if ($_SESSION['cliente']) {
             $password = password_hash($password, PASSWORD_BCRYPT);
 
             $ext = pathinfo($img['name'], PATHINFO_EXTENSION);
-            // Crea el nuevo nombre de la imagen
             $img_name = $nombre . '_' . $apellido . '.' . $ext;
-            // Define la ruta completa para la imagen
             $img_path = $ruta_img . $img_name;
-            // Mueve la imagen al directorio
             if (file_exists($ruta_img . $img_name)) {
                 unlink($ruta_img . $img_name);
                 move_uploaded_file($img['tmp_name'], $img_path);
@@ -52,11 +49,8 @@ if ($_SESSION['cliente']) {
             exit();
         } else {
             $ext = pathinfo($img['name'], PATHINFO_EXTENSION);
-            // Crea el nuevo nombre de la imagen
             $img_name = $nombre . '_' . $apellido . '_' . $email . '.' . $ext;
-            // Define la ruta completa para la imagen
             $img_path = $ruta_img . $img_name;
-            // Mueve la imagen al directorio
             if (file_exists($ruta_img . $img_name)) {
                 unlink($ruta_img . $img_name);
                 move_uploaded_file($img['tmp_name'], $img_path);
