@@ -72,9 +72,7 @@
                     }
                 });
             }
-            // Actualizar la imagen del perfil cada 5 segundos
             setInterval(updateProfileImage, 5000);
-            // Actualizar la imagen del perfil inmediatamente cuando se carga la página
             updateProfileImage();
         });
     </script>

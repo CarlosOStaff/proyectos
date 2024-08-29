@@ -27,8 +27,8 @@ if (!isset($_SESSION['admin'])) {
                             <img id="current-img" class="img-fluid rounded mt-2 mb-4 mx-auto mh-100 h-50 w-50"
                                 src="../../../Recursos/img/users/perfil/<?php echo $row['img_perfil'] ?>" alt="Imagen actual de perfil">
                             <h5 class="h3 mb-1 fst-italic"><a class="text-dark"><?php echo $row['nombre'] ?></a></h5>
-                            <p class="text-muted fw-bold"><?php echo $row['apellido'] ?></p>
-                            <p class="text-muted fw-bold"><?php echo $row['email'] ?></p>
+                            <p class="text-muted fw-bold d-inline-block text-truncate"><?php echo $row['apellido'] ?></p>
+                            <p class="text-muted fw-bold  d-inline-block text-truncate"><?php echo $row['email'] ?></p>
                             <?php if (is_null($row['email_verified_at'])): ?>
                                 <a class="text-dark fst-italic">Necesario confirmar cuenta</a>
                             <?php endif ?>

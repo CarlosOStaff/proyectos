@@ -37,7 +37,7 @@ if (!isset($_SESSION['admin'])) {
                                 src="../../../Recursos/img/portadaLibros/<?php echo $row['imagen'] ?>" alt="Card image cap">
                             <div class="card-body mx-2">
                                 <h5 class="card-title fst-italic"><?php echo $row['titulo_libro'] ?></h5>
-                                <p class="card-text"><?php echo $row['descripcion'] ?></p>
+                                <p class="card-text "><?php echo $row['descripcion'] ?></p>
                                 <strong><span class="fst-italic">Fecha de publicacion:
                                         <?php echo $row['fecha_publicacion'] ?></span></strong>
                                 <strong><span class="fst-italic">Categoria: <?php echo $row['nombre_categoria'] ?></span></strong>
@@ -109,5 +109,16 @@ if (!isset($_SESSION['admin'])) {
 
 </body>
 <?php include '../../Layouts/footer.php'; ?>
-
+<style>
+    .card-text {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .card-body {
+        max-width: 100%;
+    }
+</style>
 </html>

@@ -79,7 +79,7 @@
         $(document).ready(function() {
             function updateProfileImage() {
                 $.ajax({
-                    url: '../../Controladores/Cliente/getProfileimage.php', // Ruta al archivo PHP que devuelve la imagen
+                    url: 'http://localhost:3000/Controladores/Cliente/getProfileimage.php', // Ruta al archivo PHP que devuelve la imagen
                     method: 'GET',
                     dataType: 'json',
                     success: function(data) {
@@ -90,9 +90,7 @@
                     }
                 });
             }
-            // Actualizar la imagen del perfil cada 5 segundos
             setInterval(updateProfileImage, 5000);
-            // Actualizar la imagen del perfil inmediatamente cuando se carga la página
             updateProfileImage();
         });
     </script>

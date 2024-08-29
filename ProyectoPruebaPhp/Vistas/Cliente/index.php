@@ -43,7 +43,7 @@ if (!isset($_SESSION['cliente'])) {
                                     echo '<td class="fs-4" name ="libro">' . $row['id'] . '</td>';
                                     echo '<td class=""><img src="../../Recursos/img/portadaLibros/' . $row['imagen'] . '" alt="" class="img-fluid mw-100 w-100 h-auto"></td>';
                                     echo '<td class="fs-5">' . $row['titulo_libro'] . '</td>';
-                                    echo '<td class="fs-5">' . $row['descripcion'] . '</td>';
+                                    echo '<td class="fs-5 p-2">' . $row['descripcion'] . '</td>';
                                     echo '<td class="fs-5">' . $row['nombre_categoria'] . '</td>';
                                     echo '<td>';
                                     echo '<form action="../../Controladores/Cliente/prestarLibro.php/libro=' . $row['id'] . '" method="POST">';

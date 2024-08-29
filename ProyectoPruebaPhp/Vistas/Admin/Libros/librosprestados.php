@@ -27,9 +27,9 @@ if (!isset($_SESSION['admin'])) {
                         <img class="img-top img-fluid mb-3 mx-auto d-block rounded img-fluid mw-100 w-100 h.auto"
                             src="../../../Recursos/img/portadaLibros/<?php echo $row['imagen']?>" alt="Card image cap">
                         <div class="card-body mx-2">
-                            <div class="card-body">
+                            <div class="card-body p-2">
                                 <h5 class="card-title"><?php echo $row['titulo_libro'] ?></h5>
-                                <p class="card-text"><?php echo $row['descripcion']?></p>
+                                <p style="white-space: normal;" class="card-text d-inline-block text-truncate"><?php echo $row['descripcion']?></p>
                                 <strong><span>Fecha de prestamo: <?php echo $row['fecha_prestamo']?></span></strong>
                                 <strong><span>Categoria: <?php echo $row['nombre_categoria']?></span></strong>
                                 <p class="">Usuario que presto el libro: <strong><?php echo $row['nombre_del_usuario']?></strong></p>
