@@ -27,7 +27,7 @@
                     <a class="nav-link text-white fw-bold" href="http://localhost:3000/Vistas/Admin/usuariosActivos/usuariosActivos.php">Usuarios activos</a>
                 </li>
                 <li class="nav-item">
-                    <a href="http://localhost:3000//Auth/logout.php" class="nav-link text-white fw-bold">Logout</a>
+                    <a href="http://localhost:3000/Auth/logout.php" class="nav-link text-white fw-bold">Logout</a>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto text-center">
