@@ -61,7 +61,7 @@
         $(document).ready(function() {
             function updateProfileImage() {
                 $.ajax({
-                    url: '../../Controladores/Admin/perfilAdmin/getProfileImage.php', // Ruta al archivo PHP que devuelve la imagen
+                    url: 'http://localhost:3000/Controladores/Admin/perfilAdmin/getProfileImage.php', // Ruta al archivo PHP que devuelve la imagen
                     method: 'GET',
                     dataType: 'json',
                     success: function(data) {

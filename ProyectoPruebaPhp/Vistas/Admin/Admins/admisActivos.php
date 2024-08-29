@@ -19,7 +19,7 @@ if (!isset($_SESSION['admin'])) {
 <body>
     <div class="container">
         <h1 class="text-center p-5 fst-italic m-5">Lista de administradores activos</h1>
-        <div class="row mx-auto mt-4 justify-content-center align-items-stretch">
+        <div class="row mx-auto justify-content-center align-items-stretch">
             <?php while ($row = $result->fetch_assoc()): ?>
                 <div class="col-xl-3 col-sm-6 shadow-lg p-4 mb-5 mx-4">
                     <div class="h-100 text-center">
