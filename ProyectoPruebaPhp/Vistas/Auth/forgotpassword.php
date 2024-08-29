@@ -40,7 +40,7 @@ session_start();
     </div>
 
     <?php
-    include('../Layouts/modal.php');
+    include '../Layouts/modal.php';
     ?>
 </body>
 

@@ -1,6 +1,6 @@
 <?php
-include('../Layouts/menu_admin.php');
-include('../../BD/conexion.php');
+include '../Layouts/menu_admin.php';
+include '../../BD/conexion.php';
 
 if (!isset($_SESSION['admin'])) {
     $_SESSION['message'] = 'No has iniciado sesion';

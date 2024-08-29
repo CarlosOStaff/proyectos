@@ -1,6 +1,6 @@
 <?php
-include('../Layouts/menu_cliente.php');
-include('../../BD/conexion.php');
+include '../Layouts/menu_cliente.php';
+include '../../BD/conexion.php';
 $name = $_SESSION['cliente'];
 if (!isset($_SESSION['cliente'])) {
     $_SESSION['message'] = 'No has iniciado sesion';
@@ -177,5 +177,5 @@ if (!isset($_SESSION['cliente'])) {
 </html>
 
 <?php
-include('../Layouts/modal.php');
-include('../Layouts/footer.php'); ?>
+include '../Layouts/modal.php';
+include '../Layouts/footer.php'; ?>

@@ -1,6 +1,6 @@
 <?php
-include('../../Layouts/menu_admin.php');
-require_once('../../../BD/conexion.php');
+include '../../Layouts/menu_admin.php';
+require_once '../../../BD/conexion.php';
 if (!isset($_SESSION['admin'])) {
     $_SESSION['message'] = 'No has iniciado sesion';
     header('Location: ../../../Auth/login.php');
@@ -76,5 +76,5 @@ if (!isset($_SESSION['admin'])) {
     <?php include '../../Layouts/modal.php'; ?>
 
 </body>
-<?php include('../../Layouts/footer.php') ?>
+<?php include '../../Layouts/footer.php'; ?>
 </html>

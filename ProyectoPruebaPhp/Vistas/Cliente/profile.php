@@ -1,6 +1,6 @@
 <?php
-include('../Layouts/menu_cliente.php');
-require_once'../../BD/conexion.php';
+include '../Layouts/menu_cliente.php';
+require_once '../../BD/conexion.php';
 include('../../Controladores/Cliente/showperfil.php');
 if (!isset($_SESSION['cliente'])) {
     $_SESSION['message'] = 'No has iniciado sesion';
