@@ -15,14 +15,14 @@ if (!isset($_SESSION['admin'])) {
 </head>
 
 <body>
-    <div class="container p-5">
+    <div class="container">
         <h2 class="card-title text-center fst-italic pt-5 pb-2">Libros que se han prestado</h2>
         <div class="row mx-auto mt-4 justify-content-center align-items-center">
             <?php include('../../../Controladores/Admin/libros/librosprestados.php');
             while ($row = $result->fetch_assoc()):
             ?>
             <div class="col-lg-6">
-                <div class="col-xl-12 shadow-lg p-3 mb-5 h-50 mw-100">
+                <div class="col-xl-12 shadow-lg p-3 mb-5 h-50 mw-100 w-100">
                     <div class="card-body m-2 d-flex">
                         <img class="img-top img-fluid mb-3 mx-auto d-block rounded img-fluid mw-100 w-100 h.auto"
                             src="../../../Recursos/img/portadaLibros/<?php echo $row['imagen']?>" alt="Card image cap">

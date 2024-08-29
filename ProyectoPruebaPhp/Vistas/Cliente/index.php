@@ -173,9 +173,8 @@ if (!isset($_SESSION['cliente'])) {
         });
     </script>
 </body>
-
-</html>
-
 <?php
 include '../Layouts/modal.php';
-include '../Layouts/footer.php'; ?>
+include '../Layouts/footer.php';
+?>
+</html>
