@@ -1,0 +1,21 @@
+html, body {
+    height: 100%; /* Asegúrate de que el html y body ocupen toda la altura */
+    margin: 0;    /* Elimina los márgenes predeterminados */
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en una columna */
+}
+
+.wrapper {
+    flex: 1; /* Esto hace que el wrapper se expanda para llenar el espacio disponible */
+}
+
+.footer {
+    background-color: #343a40; /* Puedes personalizar el color del fondo */
+    color: white; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    padding: 1rem; /* Añade un poco de espacio alrededor del contenido */
+    margin-top: auto; /* Empuja el footer hacia abajo */
+}

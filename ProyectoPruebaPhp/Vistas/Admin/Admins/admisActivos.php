@@ -48,5 +48,4 @@ if (!isset($_SESSION['admin'])) {
     <?php include '../../Layouts/modal.php'; ?>
 </body>
 <?php include '../../Layouts/footer.php'; ?>
-
 </html>

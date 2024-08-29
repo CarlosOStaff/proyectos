@@ -15,7 +15,7 @@ if (!isset($_SESSION['admin'])) {
 </head>
 
 <body>
-    <div class="container">
+    <div class="container mt-5">
         <h2 class="card-title text-center fst-italic pt-5 pb-2">Libros que se han prestado</h2>
         <div class="row mx-auto mt-4 justify-content-center align-items-center">
             <?php include('../../../Controladores/Admin/libros/librosprestados.php');
@@ -37,7 +37,6 @@ if (!isset($_SESSION['admin'])) {
                         </div>
                         <!-- end card -->
                     </div>
-                    <br>
                 </div>
             </div>
             <?php endwhile ?>
