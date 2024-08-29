@@ -32,8 +32,8 @@ if ($result->num_rows > 0) {
     move_uploaded_file($img['tmp_name'], $img_path);
 
     $validated_token = base64_encode(random_bytes(20));
-
-    $newadmin = "INSERT INTO users (rol_id,img_perfil,nombre,apellido,ciudad_id,email,password,validated_token)
+    $validated_token = str_replace(['+', '/'], ['-', '_'], $validated_token);
+    $newadmin = "INSERT INTO users (rol_id,img_perfil,nombre,apellido,ciudad_id,email,password,validated_token) 
     VALUES(1,'$img_name','$nombre','$apellido','$ciudad_id','$email','$password','$validated_token')";
     $result_newadmin = $mysqli->query($newadmin);
 
