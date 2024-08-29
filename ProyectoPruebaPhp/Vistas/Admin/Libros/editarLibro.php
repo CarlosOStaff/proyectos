@@ -3,7 +3,7 @@ include '../../Layouts/menu_admin.php';
 require_once '../../../BD/conexion.php';
 if (!isset($_SESSION['admin'])) {
     $_SESSION['message'] = 'No has iniciado sesion';
-    header('Location: ../Auth/login.php');
+    header('Location: ../../Auth/login.php');
     exit();
 }
 ?>

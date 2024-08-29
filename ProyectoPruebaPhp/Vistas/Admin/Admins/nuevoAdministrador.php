@@ -26,7 +26,7 @@ if (!isset($_SESSION['admin'])) {
     <div class="container pb-5">
         <h2 class="card-title text-center pt-5 fst-italic m-5">Nuevo Administrador</h2>
         <div class="row mx-auto justify-content-center">
-            <div class="col-xl-6 shadow-lg p-3 rounded-5 bg-white">
+            <div class="col-xl-6 p-5 pt-2 rounded-5 bg-white">
                 <div class="">
                     <form action="../../../Controladores/Admin/nuevoadmin.php" enctype="multipart/form-data" method="POST" id="frm" onsubmit="return validarPasswords()">
                         <div class="row">

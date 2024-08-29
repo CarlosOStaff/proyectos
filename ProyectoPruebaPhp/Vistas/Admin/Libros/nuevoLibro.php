@@ -19,8 +19,8 @@ if (!isset($_SESSION['admin'])) {
 </head>
 
 <body>
-    <div class="p-5">
-        <div class="container bg-body col-lg-10 p-3 mt-3 pb-4 shadow-lg rounded-4">
+    <div class="mt-5 pt-5">
+        <div class="container bg-body col-lg-10 p-3 mt-5 mb-5 pb-4">
             <h2 class="card-title mb-4 text-center mt-2 fst-italic">Registrar un nuevo libro</h2>
             <div class="row justify-content-center align-items-center">
                 <div class="col-lg-10 ">

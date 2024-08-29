@@ -43,7 +43,7 @@ $sheet->setAutoFilter('A1:A' . $lastRow); // Aplica filtro solo en la columna A
 $sheet->getStyle('A1:B1')->applyFromArray([
     'font' => [
         'bold' => true,
-        'color'=>['rgb'=>'faf5f5']
+        'color' => ['rgb' => 'faf5f5']
     ],
     'fill' => [
         'fillType' => Fill::FILL_SOLID,
@@ -54,6 +54,13 @@ $sheet->getStyle('A1:B1')->applyFromArray([
         'vertical' => Alignment::VERTICAL_CENTER
     ]
 ]);
+$sheet->getStyle('A2:B' . $lastRow)->applyFromArray([
+    'alignment' => [
+        'horizontal' => Alignment::HORIZONTAL_CENTER,
+        'vertical' => Alignment::VERTICAL_CENTER
+    ]
+]);
+
 // Crea un escritor Xlsx para el archivo
 $writer = new Xlsx($spreadsheet);
 
