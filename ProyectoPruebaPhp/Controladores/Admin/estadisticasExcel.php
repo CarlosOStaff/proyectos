@@ -58,7 +58,7 @@ $sheet->getStyle('A1:B1')->applyFromArray([
 $writer = new Xlsx($spreadsheet);
 
 // Establece el nombre del archivo a descargar
-$filename = 'ejemplo.xlsx';
+$filename = 'Libros por Categorías.xlsx';
 
 // Establece las cabeceras HTTP para descargar el archivo
 header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');

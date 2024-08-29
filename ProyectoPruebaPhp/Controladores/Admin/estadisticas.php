@@ -8,4 +8,3 @@ $query = "SELECT c.nombre_categoria,
                     ON c.id = b.categoria_id 
                     GROUP BY c.nombre_categoria";
 $result = $mysqli->query($query);
-return print_r($result);
