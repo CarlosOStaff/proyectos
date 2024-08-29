@@ -12,12 +12,10 @@ if ($result->num_rows > 0) {
         if (!is_null($row['email_verified_at'])) {
             if ($row['rol_id'] == 1) {
                 $_SESSION['admin'] = $row;
-                $sessionId = $_SESSION['session_id'] = session_id();
                 header("Location: ../Vistas/Admin/index.php");
                 exit();
             } else {
                 $_SESSION['cliente'] = $row;
-                $sessionId = $_SESSION['session_id'] = session_id();
                 header("Location: ../Vistas/Cliente/index.php");
                 exit();
             }

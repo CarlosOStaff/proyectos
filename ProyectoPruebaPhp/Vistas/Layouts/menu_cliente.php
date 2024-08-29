@@ -29,17 +29,25 @@
             <ul class="navbar-nav ms-auto text-center">
                 <?php
                 session_start();
-                $user = $_SESSION['cliente'];
-                echo '<li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle text-white fw-bold" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="http://localhost:3000/Recursos/img/users/perfil/' . ($user['img_perfil']) . '"
+                if (isset($_SESSION['cliente'])) {
+                    $user = $_SESSION['cliente'];
+                    if (isset($user['nombre'])) {
+                        echo '<li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle text-white fw-bold" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="http://localhost:3000/Recursos/img/users/perfil/' . ($user['img_perfil']) . '"
                                     class="mh-25 mw-25 h-25 w-25 mx-1 px-3 rounded-circle" id="profileImage">' . $user['nombre'] . '
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="../Cliente/profile.php">Mi cuenta</a></li>
-                    </ul>
-                </li>';
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="http://localhost:3000/Vistas/Cliente/profile.php">Mi cuenta</a></li>
+                            </ul>
+                        </li>';
+                    } else {
+                        echo '<li class="nav-item"><a class="nav-link text-white fw-bold" href="#">Perfil no disponible</a></li>';
+                    }
+                } else {
+                    echo '<li class="nav-item"><a class="nav-link text-white fw-bold" href="#">No autenticado</a></li>';
+                }
                 ?>
             </ul>
         </div>
@@ -48,7 +56,7 @@
         $(document).ready(function() {
             function updateProfileImage() {
                 $.ajax({
-                    url: '../../Controladores/Admin/perfilAdmin/getProfileImage.php', // Ruta al archivo PHP que devuelve la imagen
+                    url: '../../Controladores/Cliente/getProfileimage.php', // Ruta al archivo PHP que devuelve la imagen
                     method: 'GET',
                     dataType: 'json',
                     success: function(data) {
@@ -63,6 +71,27 @@
             // Actualizar la imagen del perfil cada 5 segundos
             setInterval(updateProfileImage, 5000);
 
+            // Actualizar la imagen del perfil inmediatamente cuando se carga la página
+            updateProfileImage();
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            function updateProfileImage() {
+                $.ajax({
+                    url: '../../Controladores/Cliente/getProfileimage.php', // Ruta al archivo PHP que devuelve la imagen
+                    method: 'GET',
+                    dataType: 'json',
+                    success: function(data) {
+                        $('#profileImage').attr('src', 'http://localhost:3000/Recursos/img/users/perfil/' + data.img_perfil);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Error:', error);
+                    }
+                });
+            }
+            // Actualizar la imagen del perfil cada 5 segundos
+            setInterval(updateProfileImage, 5000);
             // Actualizar la imagen del perfil inmediatamente cuando se carga la página
             updateProfileImage();
         });

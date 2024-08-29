@@ -1,7 +1,8 @@
 <?php
 include '../../BD/conexion.php';
-include '../../Controladores/Cliente/misLibros.php';
 include '../Layouts/menu_cliente.php';
+include '../../Controladores/Cliente/misLibros.php';
+
 ?>
 <h3 class="text-center fst-italic fw-bold mt-3 mb-3">Libros que he prestado</h3>
 <div class="container">
