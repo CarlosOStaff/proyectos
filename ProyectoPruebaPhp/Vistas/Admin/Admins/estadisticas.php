@@ -13,7 +13,7 @@ if (!isset($_SESSION['admin'])) {
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <h2 class="card-title">Libros por categorías</h2>
+                    <h2 class="card-title text-center" style="color:black; text-shadow: 0.1rem 0.1rem #666565;">Libros por categorías</h2>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">

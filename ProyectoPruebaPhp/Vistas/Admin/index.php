@@ -32,7 +32,7 @@ $user = $_SESSION['admin'];
                             echo '<h4 class="mb-2 text-center h1 fst-italic">' . $row['total_activos'] . '</h4>';
                             ?>
                             <a href="usuariosActivos\usuariosActivos.php"
-                                class="btn btn-primary waves-effect waves-light btn-sm d-flex justify-content-center fst-italic fw-bold mt-4">Ver
+                                class="btn btn-primary waves-effect waves-light btn-sm d-flex justify-content-center fst-italic fw-bold mt-4 ">Ver
                                 más</a>
                         </div>
                     </div>
