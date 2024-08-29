@@ -17,6 +17,7 @@ $password = $_POST['password'];
 $ciudad_id = $_POST['ciudad_id'];
 
 $validated_token = base64_encode(random_bytes(20));
+$validated_token = str_replace(['+', '/'], ['-', '_'], $validated_token);
 
 $query = "SELECT * FROM users WHERE email = '$email'";
 $result = $mysqli->query($query);
