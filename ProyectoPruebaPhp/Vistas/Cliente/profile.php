@@ -102,7 +102,7 @@ if (!isset($_SESSION['cliente'])) {
                                 </div>
                             </div>
                             <div>
-                                <button type="submit" class="btn btn-primary w-md fst-italic fw-bold">
+                                <button type="submit" class="btn btn-outline-success w-md fst-italic fw-bold">
                                     <i class="fas fa-save"></i> Guardar
                                 </button>
                             </div>

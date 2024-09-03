@@ -3,3 +3,11 @@
     height: 20%;
     object-fit: cover;
 }
+.nav-link{
+    color:white;
+    transition: color 0.3s;
+
+}
+.nav-link:hover{
+    color:#9e9a99;
+}
