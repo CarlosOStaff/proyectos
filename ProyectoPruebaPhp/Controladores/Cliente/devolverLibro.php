@@ -17,7 +17,8 @@ if (isset($_POST['libroId'])) {
         $fecha_prestamo = new DateTime();
         $fecha_prestamo_format = $fecha_prestamo->format('Y-m-d');
 
-        $bookreturn  = "INSERT INTO book_returns (user_id,prestamo_id,fecha_devolucion) VALUES ('$user','$prestamo_id','$fecha_prestamo_format')";
+        $bookreturn  = "INSERT INTO book_returns (user_id,prestamo_id,fecha_devolucion,created_at,updated_at) 
+        VALUES ('$user','$prestamo_id','$fecha_prestamo_format','$at','$at')";
         $result_bookreturn = $mysqli->query($bookreturn);
         if ($result_bookreturn) {
             $deleteloan = "DELETE FROM loans WHERE user_id = '$user' AND libro_id = '$libro_id'";

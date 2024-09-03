@@ -44,9 +44,17 @@ if ($_SESSION['cliente']) {
         }
     } else {
         if (empty($img['name'])) {
-            $_SESSION['message'] = "Error al actualizar datos";
-            header('Location: ../../Vistas/Cliente/profile.php');
-            exit();
+            $profileUpdate = "UPDATE users SET nombre = '$nombre', apellido = '$apellido',ciudad_id ='$ciudad_id' ,email = '$email' WHERE id = '$user'";
+            $result_profileUpdate = $mysqli->query($profileUpdate);
+            if ($result_profileUpdate === true) {
+                $_SESSION['message'] = "Datos actualizados correctamente";
+                header('Location: ../../Vistas/Cliente/profile.php');
+                exit();
+            } else {
+                $_SESSION['message'] = "Error al actualizar datos";
+                header('Location: ../../Vistas/Cliente/profile.php');
+                exit();
+            }
         } else {
             $ext = pathinfo($img['name'], PATHINFO_EXTENSION);
             $img_name = $nombre . '_' . $apellido . '_' . $email . '.' . $ext;

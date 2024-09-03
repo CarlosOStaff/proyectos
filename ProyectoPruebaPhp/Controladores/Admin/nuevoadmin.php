@@ -33,8 +33,11 @@ if ($result->num_rows > 0) {
 
     $validated_token = base64_encode(random_bytes(20));
     $validated_token = str_replace(['+', '/'], ['-', '_'], $validated_token);
-    $newadmin = "INSERT INTO users (rol_id,img_perfil,nombre,apellido,ciudad_id,email,password,validated_token) 
-    VALUES(1,'$img_name','$nombre','$apellido','$ciudad_id','$email','$password','$validated_token')";
+    $now = new DateTime();
+    $now_at = $now->format('Y-m-d H:i:s');
+
+    $newadmin = "INSERT INTO users (rol_id,img_perfil,nombre,apellido,ciudad_id,email,password,validated_token,created_at) 
+    VALUES(1,'$img_name','$nombre','$apellido','$ciudad_id','$email','$password','$validated_token','$now_at')";
     $result_newadmin = $mysqli->query($newadmin);
 
     if ($result_newadmin) {

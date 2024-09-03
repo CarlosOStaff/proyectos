@@ -27,8 +27,11 @@ if ($result->num_rows > 0) {
     exit();
 } else {
     $password = password_hash($password, PASSWORD_BCRYPT);
-    $newuser = "INSERT INTO users (rol_id,nombre,apellido,ciudad_id,email,password,validated_token) 
-    VALUE (2,'$nombre','$apellido','$ciudad_id','$email','$password','$validated_token')";
+    $now = new DateTime();
+    $now_at = $now->format('Y-m-d H:i:s');
+
+    $newuser = "INSERT INTO users (rol_id,nombre,apellido,ciudad_id,email,password,validated_token,created_at) 
+    VALUE (2,'$nombre','$apellido','$ciudad_id','$email','$password','$validated_token','$now_at')";
     $result_new_user = $mysqli->query($newuser);
     if ($result_new_user) {
         $mail = new PHPMailer(true);
