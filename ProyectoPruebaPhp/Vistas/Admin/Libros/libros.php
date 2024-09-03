@@ -15,6 +15,7 @@ if (!isset($_SESSION['admin'])) {
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="../../../Css/modal.css">
+    <link rel="stylesheet" href="../../../Css/car-text.css">
 
 </head>
 
@@ -32,12 +33,12 @@ if (!isset($_SESSION['admin'])) {
             ?>
                 <div class="col-lg-6">
                     <div class="col-xl-12 shadow-lg p-3 mb-5 mx-2 h-50 mw-100">
-                        <div class="card-body m-3 d-flex col-4">
+                        <div class="card-body py-3 d-flex col-10">
                             <img class="img-top img-fluid mb-3 mx-auto d-block rounded img-fluid mw-100 w-100 h.auto"
                                 src="../../../Recursos/img/portadaLibros/<?php echo $row['imagen'] ?>" alt="Card image cap">
-                            <div class="card-body mx-2">
+                            <div class="card-body m-3">
                                 <h5 class="card-title fst-italic"><?php echo $row['titulo_libro'] ?></h5>
-                                <p class="card-text "><?php echo $row['descripcion'] ?></p>
+                                <p class="card-text"><?php echo $row['descripcion'] ?></p>
                                 <strong><span class="fst-italic">Fecha de publicacion:
                                         <?php echo $row['fecha_publicacion'] ?></span></strong>
                                 <strong><span class="fst-italic">Categoria: <?php echo $row['nombre_categoria'] ?></span></strong>
@@ -109,16 +110,4 @@ if (!isset($_SESSION['admin'])) {
 
 </body>
 <?php include '../../Layouts/footer.php'; ?>
-<style>
-    .card-text {
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    .card-body {
-        max-width: 100%;
-    }
-</style>
 </html>

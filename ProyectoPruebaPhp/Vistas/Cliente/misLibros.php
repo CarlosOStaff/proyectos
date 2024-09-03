@@ -15,6 +15,7 @@ if (!isset($_SESSION['cliente'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Layouts/modal.php">
+    <link rel="stylesheet" href="../../Css/car-text.css">
 </head>
 
 <body>
@@ -44,12 +45,10 @@ if (!isset($_SESSION['cliente'])) {
                         </div>
                     </div>
                 </div>
-
             <?php endwhile ?>
         </div>
     </div>
     <?php include '../Layouts/modal.php' ?>
 </body>
 <?php include '../Layouts/footer.php'; ?>
-
 </html>
