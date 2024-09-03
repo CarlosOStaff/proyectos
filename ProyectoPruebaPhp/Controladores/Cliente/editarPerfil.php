@@ -10,6 +10,8 @@ $ciudad_id = $_POST['ciudad_id'];
 $password = $_POST['password'];
 $password_confirm = $_POST['confirmar_password'];
 $ruta_img = "../../Recursos/img/users/perfil/";
+$at = (new DateTime())->format('Y-m-d H:i:s');
+
 
 if ($_SESSION['cliente']) {
     $user = $_SESSION['cliente'];
@@ -44,7 +46,7 @@ if ($_SESSION['cliente']) {
         }
     } else {
         if (empty($img['name'])) {
-            $profileUpdate = "UPDATE users SET nombre = '$nombre', apellido = '$apellido',ciudad_id ='$ciudad_id' ,email = '$email' WHERE id = '$user'";
+            $profileUpdate = "UPDATE users SET nombre = '$nombre', apellido = '$apellido',ciudad_id ='$ciudad_id' ,email = '$email', updated_at = '$at' WHERE id = '$user'";
             $result_profileUpdate = $mysqli->query($profileUpdate);
             if ($result_profileUpdate === true) {
                 $_SESSION['message'] = "Datos actualizados correctamente";
@@ -63,7 +65,7 @@ if ($_SESSION['cliente']) {
                 unlink($ruta_img . $img_name);
                 move_uploaded_file($img['tmp_name'], $img_path);
 
-                $profileUpdate = "UPDATE users SET img_perfil = '$img_name' ,nombre = '$nombre', apellido = '$apellido',ciudad_id ='$ciudad_id' ,email = '$email' WHERE id = '$user'";
+                $profileUpdate = "UPDATE users SET img_perfil = '$img_name' ,nombre = '$nombre', apellido = '$apellido',ciudad_id ='$ciudad_id' ,email = '$email', updated_at = '$at' WHERE id = '$user'";
                 $result_profileUpdate = $mysqli->query($profileUpdate);
                 if ($result_profileUpdate === true) {
                     $_SESSION['message'] = "Datos actualizados correctamente";
@@ -77,7 +79,7 @@ if ($_SESSION['cliente']) {
             } else {
                 move_uploaded_file($img['tmp_name'], $img_path);
 
-                $profileUpdate = "UPDATE users SET img_perfil = '$img_name' ,nombre = '$nombre', apellido = '$apellido',ciudad_id ='$ciudad_id' ,email = '$email' WHERE id = '$user'";
+                $profileUpdate = "UPDATE users SET img_perfil = '$img_name' ,nombre = '$nombre', apellido = '$apellido',ciudad_id ='$ciudad_id' ,email = '$email', updated_at = '$at' WHERE id = '$user'";
                 $result_profileUpdate = $mysqli->query($profileUpdate);
                 if ($result_profileUpdate === true) {
                     $_SESSION['message'] = "Datos actualizados correctamente";
