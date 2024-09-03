@@ -58,7 +58,7 @@ if (!isset($_SESSION['admin'])) {
                                                 <td>
                                                     <form action="../../../Controladores/Admin/UsuariosActivos/eliminarusuario.php" method="post">
                                                         <button name="user_id" value="<?php echo $row['user_id'] ?>" type="submit" 
-                                                        class="btn btn-danger waves-effect waves-light d-flex">
+                                                        class="btn btn-outline-danger waves-effect waves-light d-flex">
                                                             <i class="fas fa-trash mt-1 mx-1"></i> Eliminar
                                                         </button>
                                                     </form>

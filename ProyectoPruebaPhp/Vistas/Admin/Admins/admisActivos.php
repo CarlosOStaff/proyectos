@@ -34,7 +34,7 @@ if (!isset($_SESSION['admin'])) {
                             <?php endif ?>
                             <div class="mt-auto">
                                 <form action="../../../Controladores/Admin/eliminaradmin.php" method="post">
-                                    <button name="user_delete" value="<?php echo $row['id'] ?>" type="submit" class="btn btn-danger waves-effect waves-light mt-3">
+                                    <button name="user_delete" value="<?php echo $row['id'] ?>" type="submit" class="btn btn-outline-danger waves-effect waves-light mt-3">
                                         <i class="fas fa-trash"></i> Eliminar
                                     </button>
                                 </form>

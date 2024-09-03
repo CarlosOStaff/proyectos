@@ -85,7 +85,7 @@ if (!isset($_SESSION['admin'])) {
                                 </div>
                             </div>
                             <div>
-                                <button type="submit" class="btn btn-primary w-md fw-bold fst-italic">
+                                <button type="submit" class="btn btn-outline-success w-md fw-bold fst-italic">
                                     <i class="fas fa-save mx-1"></i>Guardar</button>
                             </div>
                         </div>

@@ -41,7 +41,7 @@ if (!isset($_SESSION['admin'])) {
             <div class="mt-3">
                 <div class="card-body">
                     <form action="../../../Controladores/Admin/estadisticasExcel.php" method="GET">
-                        <button type="submit" class="btn btn-success btn-block">
+                        <button type="submit" class="btn btn-outline-success btn-block">
                             <i class="fas fa-file-download"></i> Descargar
                         </button>
                     </form>

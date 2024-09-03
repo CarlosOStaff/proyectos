@@ -45,17 +45,17 @@ if (!isset($_SESSION['admin'])) {
                                 <div class="d-flex">
                                     <form action="editarLibro.php" method="GET" class="mt-3 mx-2">
                                         <button type="submit" name="id" value="<?php echo $row['id'] ?>"
-                                            class="fw-bold fst-italic btn btn-success waves-effect waves-light">
+                                            class="fw-bold fst-italic btn btn-outline-success waves-effect waves-light">
                                             <i class="far fa-edit"></i> Editar
                                         </button>
                                     </form>
                                     <form action="../../../Controladores/Admin/libros/eliminarLibro.php" method="POST" class="mt-3 mx-2">
                                         <button type="submit" id="btnEliminar" name="btnEliminar" value="<?php echo $row['id'] ?>"
-                                            class="fw-bold fst-italic btn btn-danger waves-effect waves-light">
+                                            class="fw-bold fst-italic btn btn-outline-danger waves-effect waves-light">
                                             <i class="far fa-trash-alt"></i> Eliminar
                                         </button>
                                     </form>
-                                    <button type="button" value="<?php echo $row['id']; ?>" class="btn-preview mt-3 mx-2 fw-bold fst-italic btn btn-success waves-effect waves-light">
+                                    <button type="button" value="<?php echo $row['id']; ?>" class="btn-preview mt-3 mx-2 fw-bold fst-italic btn btn-outline-success waves-effect waves-light">
                                         <i class="far fa-eye"></i> Preview
                                     </button>
                                 </div>

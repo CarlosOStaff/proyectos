@@ -36,7 +36,7 @@ if (!isset($_SESSION['cliente'])) {
                                     <p class="card-text"><small class="text-muted fst-italic fw-bold"><strong>Fecha de prestamo: <?php echo $row['fecha_prestamo'] ?></strong></small></p>
                                     <form action="../../Controladores/Cliente/devolverLibro.php/libro_id=<?php echo $row['id'] ?>" method="POST">
                                         <button type="submit" name="libroId" value=' <?php echo $row['id'] ?> ' 
-                                        class="btn btn-success waves-effect waves-light w-sm fst-italic fw-bold p-2">
+                                        class="btn btn-outline-success waves-effect waves-light w-sm fst-italic fw-bold p-2">
                                             <i class="mdi mdi-pencil d-block font-size-16"></i> Devolver
                                         </button>
                                     </form>
