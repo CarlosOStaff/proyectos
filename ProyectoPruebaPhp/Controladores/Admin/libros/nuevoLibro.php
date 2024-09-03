@@ -15,10 +15,12 @@ $ext = pathinfo($img['name'], PATHINFO_EXTENSION);
 $img_name = $titulo_libro . '_' . $fecha_publicacion . '.' . $ext;
 $img_path = $ruta_img . $img_name;
 
+$at = (new DateTime())->format('Y-m-d H:i:s');
+
 move_uploaded_file($img['tmp_name'], $img_path);
 
-$query = "INSERT INTO books (imagen,titulo_libro,descripcion,contenido,fecha_publicacion,categoria_id) 
-VALUES ('$img_name','$titulo_libro','$descripcion','$contenido','$fecha_publicacion','$categoria_id')";
+$query = "INSERT INTO books (imagen,titulo_libro,descripcion,contenido,fecha_publicacion,categoria_id,created_at) 
+VALUES ('$img_name','$titulo_libro','$descripcion','$contenido','$fecha_publicacion','$categoria_id','$at')";
 $result = $mysqli->query($query);
 if ($result) {
     $book_id = $mysqli->insert_id;

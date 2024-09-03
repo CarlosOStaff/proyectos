@@ -14,8 +14,8 @@ if (isset($_POST['libroId'])) {
     $at = (new DateTime())->format('Y-m-d H:i:s');
     $fecha_prestamo_format = $fecha_prestamo->format('Y-m-d');
 
-    $query = "INSERT INTO loans (user_id, libro_id, fecha_prestamo, fecha_devolucion, created_at, updated_at) 
-    VALUES ('$user_id', '$libro_id', '$fecha_prestamo_format', NULL, '$at', '$at')";
+    $query = "INSERT INTO loans (user_id, libro_id, fecha_prestamo, fecha_devolucion, created_at) 
+    VALUES ('$user_id', '$libro_id', '$fecha_prestamo_format', NULL, '$at')";
     $result = $mysqli->query($query);
     if($result){
         $_SESSION['message']='Libro prestado exitosamente';

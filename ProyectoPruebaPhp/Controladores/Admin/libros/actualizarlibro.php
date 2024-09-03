@@ -9,13 +9,14 @@ $fecha_publicacion = $_POST['fecha_publicacion'];
 $contenido = $_POST['contenido'];
 $imagen = $_FILES['imagen'];
 $ruta_img = "../../../Recursos/img/portadaLibros/";
-
+$at = (new DateTime())->format('Y-m-d H:i:s');
 if (empty($imagen['tmp_name'])) {
     $libro = "UPDATE books 
         SET titulo_libro = '$titulo_libro', 
         descripcion = '$descripcion', contenido = '$contenido', 
         fecha_publicacion = '$fecha_publicacion', 
-        categoria_id = '$categoria_id'
+        categoria_id = '$categoria_id',
+        updated_at = '$at'
         WHERE id = '$id'";
     $libro_result = $mysqli->query($libro);
     if ($libro_result) {
@@ -38,7 +39,8 @@ if (empty($imagen['tmp_name'])) {
         $libro_img = "UPDATE books SET imagen = '$img_name',titulo_libro = '$titulo_libro', 
             descripcion = '$descripcion', contenido = '$contenido', 
             fecha_publicacion = '$fecha_publicacion', 
-            categoria_id = '$categoria_id'
+            categoria_id = '$categoria_id',
+            updated_at = '$at'
             WHERE id = '$id'";
         $libro_img_result = $mysqli->query($libro_img);
         if ($libro_img_result) {
@@ -55,7 +57,8 @@ if (empty($imagen['tmp_name'])) {
         $libro_img = "UPDATE books SET imagen = '$img_name',titulo_libro = '$titulo_libro', 
             descripcion = '$descripcion', contenido = '$contenido', 
             fecha_publicacion = '$fecha_publicacion', 
-            categoria_id = '$categoria_id'
+            categoria_id = '$categoria_id',
+            updated_at = '$at'
             WHERE id = '$id'";
         $libro_img_result = $mysqli->query($libro_img);
         if ($libro_img_result) {
