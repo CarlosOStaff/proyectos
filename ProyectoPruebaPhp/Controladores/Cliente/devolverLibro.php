@@ -27,9 +27,23 @@ if (isset($_POST['libroId'])) {
                 $_SESSION['message'] = "Libro devuelto con exito";
                 header("Location: ../../../Vistas/Cliente/misLibros.php");
                 exit();
+            } else {
+                $_SESSION['message'] = "Error al realizar esta accion";
+                header("Location: ../../../Vistas/Cliente/misLibros.php");
+                exit();
             }
+        } else {
+            $_SESSION['message'] = "Error al realizar esta accion";
+            header("Location: ../../../Vistas/Cliente/misLibros.php");
+            exit();
         }
+    } else {
+        $_SESSION['message'] = "Error al intentar devolver el libro";
+        header("Location: ../../../Vistas/Cliente/misLibros.php");
+        exit();
     }
 } else {
-    echo 'no hay id';
+    $_SESSION['message'] = "No se encontro el libro";
+    header("Location: ../../../Vistas/Cliente/misLibros.php");
+    exit();
 }
