@@ -98,7 +98,9 @@ session_start();
                                     <div class="col-sm-9">
                                         <div>
                                             <button type="submit"
-                                                class="btn btn-primary w-md fst-italic fw-bold">Guardar</button>
+                                                class="btn btn-outline-primary w-md fst-italic fw-bold">
+                                                <i class="fas fa-save"></i>
+                                                Guardar</button>
                                         </div>
                                     </div>
                                 </div>
