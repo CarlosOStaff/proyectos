@@ -1,5 +1,6 @@
 <?php
 session_start();
+$publickey = '6LdhtTYqAAAAAKEW9qFmj_napun7g_RmNeNR3M86';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -12,6 +13,8 @@ session_start();
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="../../Css/modal.css">
+  <script src="https://www.google.com/recaptcha/api.js?hl=es" async defer></script>
+
 </head>
 
 <body>
@@ -38,6 +41,8 @@ session_start();
                     <input type="password" required name="password" class="form-control" id="horizontal-password-input" placeholder="Enter Your Password" />
                   </div>
                 </div>
+                <div class="g-recaptcha" name="g-recaptcha-response" data-sitekey="<?php echo $publickey ?>"></div>
+
                 <div class="row justify-content-end">
                   <div class="col-sm-9">
                     <div>
@@ -55,7 +60,7 @@ session_start();
       </div>
     </div>
   </div>
-<?php include '../Layouts/modal.php'; ?>
+  <?php include '../Layouts/modal.php'; ?>
 
 </body>
 

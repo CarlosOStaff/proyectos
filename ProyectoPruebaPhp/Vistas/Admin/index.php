@@ -19,7 +19,7 @@ $user = $_SESSION['admin'];
 </head>
 
 <body>
-    <h1 class="text-center fst-italic pt-5 m-5 elegantshadow">Bienvenido <?php echo $user['nombre'] ?></h1>
+    <h1 class="text-center fst-italic pt-5 mt-5 elegantshadow">Bienvenido <?php echo $user['nombre'] ?></h1>
     <div class="container">
         <div class="row mx-auto mt-4 justify-content-center align-items-center">
 

@@ -64,7 +64,7 @@ if ($result->num_rows > 0) {
                             <h3 style="font-style:italic; font-weight:bold; color:black;">Hola, este es un correo generado para la verificación de tu cuenta en nuestra librería.</h3>
                             <p style="font-style:italic; color: #555;">Sigue los pasos a continuación.</p>
                             <p style="color: #555;">Haz clic en el siguiente enlace:</p>
-                            <a href="http://localhost:3000/Controladores/confirmarCorreo.php?email=' . $email . '&token=' . $validated_token . '" style="display: inline-block; padding: 1vw 1.5vw; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px;">Confirmar cuenta</a>
+                            <a href="http://proyectos.test/ProyectoPruebaPhp/Controladores/confirmarCorreo.php?email=' . $email . '&token=' . $validated_token . '" style="display: inline-block; padding: 1vw 1.5vw; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px;">Confirmar cuenta</a>
                         </div>';
             $mail->send();
 

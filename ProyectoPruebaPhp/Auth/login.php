@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once('../BD/conexion.php');
+require_once '../reCaptchav2/verificar_recaptcha.php';
 
 $email = $_POST['email'];
 $password = $_POST['password'];
@@ -11,13 +12,22 @@ if ($result->num_rows > 0) {
     if (password_verify($password, $row['password'])) {
         if (!is_null($row['email_verified_at'])) {
             if ($row['rol_id'] == 1) {
-                $_SESSION['admin'] = $row;
-                header("Location: ../Vistas/Admin/index.php");
-                exit();
+                /*Valida que la respuesta del captcha sea true*/
+                if ($response_data->success) {
+                    $_SESSION['admin'] = $row;
+                    header("Location: ../Vistas/Admin/index.php");
+                    exit();
+                } else {
+                    $_SESSION['message'] = 'Completa el captcha';
+                }
             } else {
-                $_SESSION['cliente'] = $row;
-                header("Location: ../Vistas/Cliente/index.php");
-                exit();
+                if ($response_data->success) {
+                    $_SESSION['cliente'] = $row;
+                    header("Location: ../Vistas/Cliente/index.php");
+                    exit();
+                } else {
+                    $_SESSION['message'] = 'Completa el captcha';
+                }
             }
         } else {
             $_SESSION['message'] = 'Correo no verificado';

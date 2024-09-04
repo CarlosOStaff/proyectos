@@ -17,8 +17,8 @@ if (isset($_POST['token']) && isset($_POST['email'])) {
         $result = $mysqli->query($passwordUpdate);
         $_SESSION['message'] = 'Contraseña actualizada, inicia sesión en el siguiente enlace: <a href="login.php">Iniciar sesión</a>';
         header("Location: ../Vistas/Auth/cambiarpassword.php");
-        exit();
         session_destroy();
+        exit();
     }
 } else {
     $_SESSION['message'] = 'Token o correo electrónico inválidos.';
