@@ -39,6 +39,5 @@ if ($result->num_rows > 0) {
     $_SESSION['message'] = 'Usuario no encontrado';
 }
 
-// Redirige a la página de login después de establecer el mensaje en la sesión
 header("Location: ../Vistas/Auth/login.php");
 exit();

@@ -19,8 +19,9 @@ $user = $_SESSION['admin'];
 </head>
 
 <body>
-    <h1 class="text-center fst-italic pt-5 mt-5 elegantshadow">Bienvenido <?php echo $user['nombre'] ?></h1>
     <div class="container">
+        <br>
+    <h1 class="text-center fst-italic pt-5 mt-5 elegantshadow">Bienvenido <?php echo $user['nombre'] ?></h1>
         <div class="row mx-auto mt-4 justify-content-center align-items-center">
 
             <div class="col-md-3 shadow-lg p-4 mb-5 bg-body rounded">

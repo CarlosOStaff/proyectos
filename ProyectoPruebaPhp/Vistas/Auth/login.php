@@ -1,6 +1,6 @@
 <?php
 session_start();
-$publickey = '6LdhtTYqAAAAAKEW9qFmj_napun7g_RmNeNR3M86';
+require '../../Claves/claves.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -14,6 +14,7 @@ $publickey = '6LdhtTYqAAAAAKEW9qFmj_napun7g_RmNeNR3M86';
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="../../Css/modal.css">
   <script src="https://www.google.com/recaptcha/api.js?hl=es" async defer></script>
+
 
 </head>
 
@@ -41,17 +42,20 @@ $publickey = '6LdhtTYqAAAAAKEW9qFmj_napun7g_RmNeNR3M86';
                     <input type="password" required name="password" class="form-control" id="horizontal-password-input" placeholder="Enter Your Password" />
                   </div>
                 </div>
-                <div class="g-recaptcha" name="g-recaptcha-response" data-sitekey="<?php echo $publickey ?>"></div>
-
-                <div class="row justify-content-end">
-                  <div class="col-sm-9">
-                    <div>
-                      <button type="submit" class="btn btn-primary w-md fw-bold fst-italic">Iniciar sesión</button>
+                <div class="row">
+                  <div class="col text-center">
+                    <div class="g-recaptcha d-inline-block" name="g-recaptcha-response" 
+                    data-sitekey="<?php echo $claves['publicKey'] ?>"></div>
+                  </div>
+                  <div class="row justify-content-end">
+                    <div class="col-sm-9">
+                      <div>
+                        <button type="submit" class="btn btn-primary w-md fw-bold fst-italic">Iniciar sesión</button>
+                      </div>
                     </div>
                   </div>
-                </div>
               </form>
-              <div class="col-6 text-center">
+              <div class="col-6 text-center mt-1">
                 <span class="mx-auto d-block"><a href="forgotpassword.php">Recuperar contraseña</a></span>
               </div>
             </div>

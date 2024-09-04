@@ -1,6 +1,5 @@
 <?php
-// Clave secreta de reCAPTCHA
-$secret = '6LdhtTYqAAAAAK6ZWwHimsgZlb8XRAXYRkhfxf1C';
+require '../Claves/claves.php';
 
 // La respuesta del reCAPTCHA
 $response = $_POST['g-recaptcha-response'];
@@ -13,7 +12,7 @@ $verify_url = 'https://www.google.com/recaptcha/api/siteverify';
 
 // Datos a enviar para la verificación
 $data = array(
-    'secret' => $secret,
+    'secret' => $claves['secretKey'],
     'response' => $response,
     'remoteip' => $remote_ip
 );
