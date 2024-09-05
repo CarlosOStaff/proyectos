@@ -22,7 +22,7 @@ if (!isset($_SESSION['cliente'])) {
     <div class="container">
         <h1 class="text-center mt-4 fst-italic elegantshadow">Bienvenido <?php echo $name['nombre'] ?> </h1>
         <div class="row mx-auto mt-4 justify-content-center align-items-center">
-            <h3 class="text-center mb-3">Visualiza nuestro catálogo de libros disponibles</h3>
+            <h3 class="deepshadow text-center mb-3">Visualiza nuestro catálogo de libros disponibles</h3>
             <div class="col-12">
                 <div class="table-responsive">
                     <table class="table table-striped table-hover table-bordered table-dark">

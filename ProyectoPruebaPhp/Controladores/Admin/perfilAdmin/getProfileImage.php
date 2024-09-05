@@ -15,11 +15,11 @@ if (isset($_SESSION['admin'])) {
         ]);
     } else {
         echo json_encode([
-            'img_perfil' => 'default.jpg'
+            'img_perfil' => 'default_img.jpg'
         ]);
     }
 } else {
     echo json_encode([
-        'img_perfil' => 'default.jpg'
+        'img_perfil' => 'default_img.jpg'
     ]);
 }
