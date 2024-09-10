@@ -16,17 +16,18 @@ if (!isset($_SESSION['admin'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Css/modal.css">
+    <link rel="stylesheet" href="../../../Css/cssAdmin/nuevoLibro.css">
 </head>
 
 <body>
     <div class="mt-5 pt-5">
-        <div class="container bg-body col-lg-10 p-3 mt-5 mb-5 pb-4">
-            <h2 class="card-title mb-4 text-center mt-2 fst-italic">Registrar un nuevo libro</h2>
+        <div class="container bg-body col-lg-10 p-3 mt-1 mb-5 pb-4">
+            <h2 class="title mb-4 text-center mt-1 fst-italic">Registrar un nuevo libro</h2>
             <div class="row justify-content-center align-items-center">
                 <div class="col-lg-10 ">
                     <form action="../../../Controladores/Admin/libros/nuevoLibro.php" method="POST" enctype="multipart/form-data">
                         <div class="mb-3">
-                            <label for="formrow-firstname-input" class="form-label fw-bold fst-italic">Titulo del
+                            <label for="formrow-firstname-input" class="label-title form-label fw-bold fst-italic">Titulo del
                                 libro</label>
                             <input type="text" class="form-control" required name="titulo_libro" placeholder="Don quijote">
                         </div>
@@ -34,20 +35,20 @@ if (!isset($_SESSION['admin'])) {
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="formrow-email-input"
-                                        class="form-label fw-bold fst-italic">Descripcion</label>
+                                        class="label-descripcion form-label fw-bold fst-italic">Descripcion</label>
                                     <textarea name="descripcion" required id="" row="4" class="form-control" placeholder="Descripcion..."></textarea>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="formrow-email-input" class="form-label fw-bold fst-italic">Contenido</label>
+                                    <label for="formrow-email-input" class="label-contenido form-label fw-bold fst-italic">Contenido</label>
                                     <textarea name="contenido" required id="" row="4" class="form-control" placeholder="Contenido..."></textarea>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="formrow-password-input" class="form-label fw-bold fst-italic">Fecha de
+                                        <label for="formrow-password-input" class="label-fecha form-label fw-bold fst-italic">Fecha de
                                             publicacion</label>
                                         <input type="date" class="form-control" required name="fecha_publicacion">
                                     </div>
@@ -55,7 +56,7 @@ if (!isset($_SESSION['admin'])) {
                                 <div class="col-lg-6">
                                     <div class="mb-3">
                                         <label for="formrow-inputState"
-                                            class="form-label fw-bold fst-italic">Etiquetas</label>
+                                            class="label-etiqueta form-label fw-bold fst-italic">Etiquetas</label>
                                         <select id="formrow-inputState" required name="etiqueta_id" class="form-select">
                                             <option> Seleccionar...</option>
                                             <?php while ($row = $result_etiquetas->fetch_assoc()): ?>
@@ -69,7 +70,7 @@ if (!isset($_SESSION['admin'])) {
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="mb-3">
-                                    <label for="formrow-inputState" class="form-label fw-bold fst-italic">Categoria</label>
+                                    <label for="formrow-inputState" class="label-categoria form-label fw-bold fst-italic">Categoria</label>
                                     <select id="formrow-inputState" required name="categoria_id" class="form-select">
                                         <option> Seleccionar...</option>
                                         <?php while ($row2 = $result->fetch_assoc()): ?>
@@ -80,7 +81,7 @@ if (!isset($_SESSION['admin'])) {
                             </div>
                             <div class="col-lg-6">
                                 <div class="mb-3">
-                                    <label for="formrow-inputState" class="form-label fw-bold fst-italic">Imagen</label>
+                                    <label for="formrow-inputState" class="label-imagen form-label fw-bold fst-italic">Imagen</label>
                                     <input class="form-control" required type="file" id="imagen" name="imagen">
                                 </div>
                             </div>

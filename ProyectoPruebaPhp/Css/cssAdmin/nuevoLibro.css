@@ -1,0 +1,89 @@
+.title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3rem;
+    color: whiblackte;
+    text-shadow: 0 1px 0 #000000, 0 2px 0 #000000, 0 3px 0 #000000, 0 4px 0 #b9b9b9,
+        0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+        0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+        0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+        0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+.label-title {
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    display: block;
+    font-size: 1rem;
+    color: #000000;
+    text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    text-align: left;
+}
+
+.label-descripcion{
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    display: block;
+    font-size: 1rem;
+    color: #000000;
+    text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    text-align: left;
+}
+.label-contenido{
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    display: block;
+    font-size: 1rem;
+    color: #000000;
+    text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    text-align: left;
+}
+.label-fecha{
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    display: block;
+    font-size: 1rem;
+    color: #000000;
+    text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    text-align: left;
+}
+.label-etiqueta{
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    display: block;
+    font-size: 1rem;
+    color: #000000;
+    text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    text-align: left;
+}
+.label-categoria{
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    display: block;
+    font-size: 1rem;
+    color: #000000;
+    text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    text-align: left;
+}
+.label-imagen{
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    display: block;
+    font-size: 1rem;
+    color: #000000;
+    text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    text-align: left;
+}

@@ -14,11 +14,12 @@ if (!isset($_SESSION['admin'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Css/modal.css">
+    <link rel="stylesheet" href="../../../Css/cssAdmin/usuariosactivos.css">
 </head>
 
 <body>
     <div class="container">
-        <h2 class="card-title p-5 text-center fst-italic m-5">Bienvenido, aqui puedes visualizar los usuarios activos</h42>
+        <h2 class=" p-5 text-center fst-italic m-5" data-shadow-text="Bienvenido, aqui puedes visualizar los usuarios activos">Bienvenido, aqui puedes visualizar los usuarios activos</h42>
             <div class="row mx-auto mt-4 justify-content-center align-items-center">
                 <div class="col-lg-12">
                     <div class="card">
@@ -27,7 +28,7 @@ if (!isset($_SESSION['admin'])) {
                                 <table class="table align-middle table-nowrap mb-0">
                                     <thead class="table-light">
                                         <tr>
-                                            <th class="align-middle h5">ID</th>
+                                            <th class="align-middle h5">Id</th>
                                             <th class="align-middle h5">img</th>
                                             <th class="align-middle h5">Nombre</th>
                                             <th class="align-middle h5">Apellido</th>
@@ -41,19 +42,19 @@ if (!isset($_SESSION['admin'])) {
                                     while ($row = $result->fetch_assoc()): ?>
                                         <tbody>
                                             <tr>
-                                                <td class="h6"><?php echo $row['user_id'] ?></td>
+                                                <td class="h6"><h4><?php echo $row['user_id'] ?></h4></td>
                                                 <td class="h6">
                                                     <img src="../../../Recursos/img/users/perfil/<?php echo $row['img_perfil'] ?>" alt="Imagen de perfil"
-                                                        class="profile-img mw-50 mh-50 w-25 h-25 rounded-circle">
+                                                        class="profile-img mw-50 mh-50 w-100 h-100 rounded-circle">
                                                 </td>
-                                                <td class="h6"><?php echo $row['nombre'] ?></td>
+                                                <td class="h6"><h4><?php echo $row['nombre'] ?></h4></td>
+                                                <td class="h6"><h4>
+                                                    <?php echo $row['apellido'] ?> </h4></td>
                                                 <td class="h6">
-                                                    <?php echo $row['apellido'] ?> </td>
-                                                <td class="h6">
-                                                    <?php echo $row['nombre_ciudad'] ?>
+                                                <h4><?php echo $row['nombre_ciudad'] ?></h4>
                                                 </td>
-                                                <td class="h6">
-                                                    <?php echo $row['email'] ?>
+                                                <td class="h6"><h4>
+                                                    <?php echo $row['email'] ?></h4>
                                                 </td>
                                                 <td>
                                                     <form action="../../../Controladores/Admin/UsuariosActivos/eliminarusuario.php" method="post">

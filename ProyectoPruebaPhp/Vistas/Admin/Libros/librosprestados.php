@@ -13,11 +13,12 @@ if (!isset($_SESSION['admin'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Css/car-text.css">
+    <link rel="stylesheet" href="../../../Css/cssAdmin/librosprestados.css">
 </head>
 
 <body>
     <div class="container mt-5">
-        <h2 class="card-title text-center fst-italic pt-5 pb-2">Libros que se han prestado</h2>
+        <h2 class="text-center fst-italic pt-5 pb-2">Libros que se han prestado</h2>
         <div class="row mx-auto mt-4 justify-content-center align-items-center">
             <?php include('../../../Controladores/Admin/libros/librosprestados.php');
             while ($row = $result->fetch_assoc()):

@@ -20,6 +20,7 @@ if (!isset($_SESSION['admin'])) {
     <title>Nuevo Administrador</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../../Css/modal.css">
+    <link rel="stylesheet" href="../../../Css/cssAdmin/nuevoadmin.css">
 </head>
 
 <body>
@@ -37,7 +38,7 @@ if (!isset($_SESSION['admin'])) {
                                     style="display: block; max-height: 200px;">
                             </div>
                             <div class="col-sm-9">
-                                <label for="img_perfil" class="col-form-label fst-italic fw-bold mt-3">Selecciona una imagen de perfil</label>
+                                <label for="img_perfil" class="txt col-form-label fst-italic fw-bold mt-3">Selecciona una imagen de perfil</label>
                                 <input class="form-control" id="img_perfil" required name="img_perfil" type="file" onchange="previewImage()">
                             </div>
                         </div>
@@ -139,5 +140,4 @@ if (!isset($_SESSION['admin'])) {
 
 </body>
 <?php include '../../Layouts/footer.php'; ?>
-
 </html>

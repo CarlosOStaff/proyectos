@@ -16,13 +16,14 @@ if (!isset($_SESSION['admin'])) {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="../../../Css/modal.css">
     <link rel="stylesheet" href="../../../Css/car-text.css">
+    <link rel="stylesheet" href="../../../Css/cssAdmin/libros.css">
 
 </head>
 
 <body>
     <div class="container">
 
-        <h2 class="card-title text-center pt-5 fst-italic m-5">Libros disponibles</h2>
+        <h2 class="title text-center pt-5 fst-italic m-5">Libros disponibles</h2>
 
         <div class="row mx-auto mt-4 justify-content-center align-items-center d-flex">
             <?php
@@ -32,9 +33,9 @@ if (!isset($_SESSION['admin'])) {
                 $books[] = $row;
             ?>
                 <div class="col-lg-6">
-                    <div class="col-xl-12 shadow-lg p-3 mb-5 mx-2 h-50 mw-100">
+                    <div class="cardBody col-xl-12 shadow-lg p-3 mb-5 mx-2 h-50 mw-100">
                         <div class="card-body py-3 d-flex col-10">
-                            <img class="img-top img-fluid mb-3 mx-auto d-block rounded img-fluid mw-100 w-100 h.auto"
+                            <img class="img-top img-fluid mb-3 mx-auto d-block rounded img-fluid mw-100 w-100 h-auto"
                                 src="../../../Recursos/img/portadaLibros/<?php echo $row['imagen'] ?>" alt="Card image cap">
                             <div class="card-body m-3">
                                 <h5 class="card-title fst-italic"><?php echo $row['titulo_libro'] ?></h5>

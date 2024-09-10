@@ -1,0 +1,36 @@
+body {
+    background-image: url('../../Recursos/img/luxury-abstract-banner-background-modern-geometric-shapes-an-d-gold-line-art-wallpaper-design-for-website-prints-cover-backdrop-wall-art-and-wall-decoration-vector.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+h1 {
+    font-family: "Avant Garde",
+        Avantgarde,
+        "Century Gothic",
+        CenturyGothic,
+        "AppleGothic",
+        sans-serif;
+    font-size: 2.8em;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+}
+
+h1.elegantshadow {
+    color: black;
+    letter-spacing: .15em;
+    text-shadow:
+        1px -1px 0 #a8a7a7,
+        -1px 2px 1px #a8a7a7,
+        -2px 4px 1px #a8a7a7,
+        -3px 6px 1px #a8a7a7,
+        -4px 8px 1px #a8a7a7,
+        -5px 10px 1px #a8a7a7,
+        -6px 12px 1px #a8a7a7,
+        -7px 14px 1px #a8a7a7,
+        -8px 16px 1px #a8a7a7
+}
+

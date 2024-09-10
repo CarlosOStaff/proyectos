@@ -15,16 +15,16 @@ $user = $_SESSION['admin'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../Css/hit-the-floor.css">
+    <link rel="stylesheet" href="../../Css/cssAdmin/index.css">
 </head>
 
 <body>
     <div class="container">
         <br>
-    <h1 class="text-center fst-italic pt-5 mt-5 elegantshadow">Bienvenido <?php echo $user['nombre'] ?></h1>
+        <h1 class="elegantshadow text-center fst-italic pt-5 mt-5">Bienvenido <?php echo $user['nombre'] ?></h1>
         <div class="row mx-auto mt-4 justify-content-center align-items-center">
 
-            <div class="col-md-3 shadow-lg p-4 mb-5 bg-body rounded">
+            <div class="col-md-3 shadow-lg p-4 mb-5 bg-body rounded bg-white">
                 <div class="card-body">
                     <div class="d-flex">
                         <div class="flex-grow-1">
@@ -41,7 +41,7 @@ $user = $_SESSION['admin'];
                 </div>
             </div>
 
-            <div class="col-md-3 shadow-lg p-4 mb-5 mx-4">
+            <div class="col-md-3 shadow-lg p-4 mb-5 mx-4 bg-white rounded">
                 <div class="card-body">
                     <div class="d-flex">
                         <div class="flex-grow-1">
@@ -58,7 +58,7 @@ $user = $_SESSION['admin'];
                 </div>
             </div>
 
-            <div class="col-md-3 shadow-lg p-4 mb-5 mx-4">
+            <div class="col-md-3 shadow-lg p-4 mb-5 mx-4 bg-white rounded">
                 <div class="card-body">
                     <div class="d-flex">
                         <div class="flex-grow-1">
@@ -79,12 +79,14 @@ $user = $_SESSION['admin'];
     </div>
     <div class="container">
         <div class="row mx-auto mt-4 justify-content-center align-items-center">
-            <h3 class="text-center fst-italic fw-bold mb-3">Opciones de administrador</h3>
-            <div class="col-md-3 shadow-lg p-4 mb-5 mx-4">
+            <h3 class=" text-center fst-italic fw-bold mb-3">Opciones de administrador</h3>
+
+            <div class="col-md-3 shadow-lg p-4 mb-5 mx-4  bg-white rounded">
                 <div class="text-center">
                     <div class="card-body">
                         <div class="avatar-lg mx-auto mb-4">
-                            <i class="fas fa-user fa-3x"></i>
+                            <i class="fas fa-users fa-3x"></i>
+                            </span>
                         </div>
                         <h5 class="mb-1"><a href="Admins/nuevoAdministrador.php" class="text-dark fst-italic">Nuevo
                                 Administrador</a></h5>
@@ -92,7 +94,7 @@ $user = $_SESSION['admin'];
                 </div>
             </div>
 
-            <div class="col-md-3 shadow-lg p-4 mb-5 mx-4">
+            <div class="col-md-3 shadow-lg p-4 mb-5 mx-4  bg-white rounded">
                 <div class="text-center">
                     <div class="card-body">
                         <div class="avatar-lg mx-auto mb-4">
@@ -106,7 +108,7 @@ $user = $_SESSION['admin'];
                 </div>
             </div>
 
-            <div class="col-md-3 shadow-lg p-4 mb-5 mx-4">
+            <div class="col-md-3 shadow-lg p-4 mb-5 mx-4  bg-white rounded">
                 <div class="text-center">
                     <div class="card-body">
                         <div class="avatar-lg mx-auto mb-4">
@@ -120,7 +122,7 @@ $user = $_SESSION['admin'];
                 </div>
             </div>
 
-            <div class="col-md-3 shadow-lg p-4 mb-5 mx-4">
+            <div class="col-md-3 shadow-lg p-4 mb-5 mx-4  bg-white rounded">
                 <div class="text-center">
                     <div class="card-body">
                         <div class="avatar-lg mx-auto mb-4">
@@ -138,4 +140,5 @@ $user = $_SESSION['admin'];
     </div>
 </body>
 <?php include '../Layouts/footer.php'; ?>
+
 </html>
