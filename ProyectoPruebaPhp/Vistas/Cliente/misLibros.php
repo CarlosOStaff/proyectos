@@ -14,18 +14,19 @@ if (!isset($_SESSION['cliente'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Css/cssCliente/mislibros.css">
     <link rel="stylesheet" href="../Layouts/modal.php">
     <link rel="stylesheet" href="../../Css/car-text.css">
 </head>
 
 <body>
-    <h3 class="text-center fst-italic fw-bold mt-3 mb-3">Libros que he prestado</h3>
+    <h3 class=" text-center fst-italic fw-bold mt-3 mb-3">Libros que he prestado</h3>
     <div class="container">
-        <div class="row mx-auto mt-4 justify-content-center align-items-center">
+        <div class="row mx-auto mt-2 justify-content-center align-items-center">
             <?php
             while ($row = $result->fetch_assoc()): ?>
-                <div class="col-lg-6">
-                    <div class="col-xl-12 shadow-lg p-3 mb-5 h-50 mw-100 w-100">
+                <div class="col-lg-6 car">
+                    <div class="cardBody col-xl-12 shadow-lg p-3 mb-5 h-50 mw-100 w-100">
                         <div class="card-body m-2 d-flex">
                             <img class="img-top img-fluid mb-3 mx-auto d-block rounded" src="../../Recursos/img/portadaLibros/<?php echo $row['imagen'] ?>" alt="Card image cap">
                             <div class="card-body mx-2">

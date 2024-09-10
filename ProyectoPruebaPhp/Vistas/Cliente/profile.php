@@ -19,13 +19,14 @@ if (!isset($_SESSION['cliente'])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../Css/cssCliente/misDatos.css">
 </head>
 
 <body>
     <div class="container mt-4 mb-4">
         <div class="row justify-content-center">
             <div class="col-xl-6">
-                <div class="card">
+                <div class="">
                     <div class="card-body">
                         <h4 class="card-title mb-4 fst-italic fw-bold">Mis datos</h4>
                         <form action="../../Controladores/Cliente/editarPerfil.php" method="POST" enctype="multipart/form-data">

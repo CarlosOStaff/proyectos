@@ -14,15 +14,15 @@ if (!isset($_SESSION['cliente'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Css/cssCliente/index.css">
     <link rel="stylesheet" href="../../Css/car-text.css">
-    <link rel="stylesheet" href="../../Css/hit-the-floor.css">
 </head>
 
 <body>
     <div class="container">
         <h1 class="text-center mt-4 fst-italic elegantshadow">Bienvenido <?php echo $name['nombre'] ?> </h1>
         <div class="row mx-auto mt-4 justify-content-center align-items-center">
-            <h3 class="deepshadow text-center mb-3">Visualiza nuestro catálogo de libros disponibles</h3>
+            <h3 class="rainbow text-center mb-3 fst-italic">Visualiza nuestro catálogo de libros disponibles</h3>
             <div class="col-12">
                 <div class="table-responsive">
                     <table class="table table-striped table-hover table-bordered table-dark">
