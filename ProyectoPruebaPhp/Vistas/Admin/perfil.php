@@ -15,6 +15,7 @@ if (!isset($_SESSION['admin'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Css/cssAdmin/perfil.css">
     <link rel="stylesheet" href="../../Css/modal.css">
 
 </head>
@@ -31,7 +32,7 @@ if (!isset($_SESSION['admin'])) {
                                 <tbody>
                                     <?php while ($row = $result_perfil->fetch_assoc()): ?>
                                         <tr>
-                                            <th scope="row" class="text-end">Elije una imagen de perfil</th>
+                                            <th scope="row" class="text">Elije una imagen de perfil</th>
                                             <td>
                                                 <!-- Imagen actual -->
                                                 <?php if ($row['img_perfil']): ?>
@@ -102,7 +103,7 @@ if (!isset($_SESSION['admin'])) {
                                     </tr>
                                     <tr>
                                         <td colspan="2" class="text-center">
-                                            <button type="submit" class="btn btn-success waves-effect waves-light">
+                                            <button type="submit" class="btn btn-outline-success waves-effect waves-light">
                                                 <i class="fas fa-edit"></i> Editar
                                             </button>
                                         </td>

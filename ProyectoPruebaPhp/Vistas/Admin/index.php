@@ -79,8 +79,17 @@ $user = $_SESSION['admin'];
     </div>
     <div class="container">
         <div class="row mx-auto mt-4 justify-content-center align-items-center">
-            <h3 class=" text-center fst-italic fw-bold mb-3">Opciones de administrador</h3>
-
+            <div class="container mb-3">
+                <h1>
+                    <div class="animation">
+                        <span class="first">Opciones de</span>
+                        <span class="oh">
+                            <span class="second">administrador</span>
+                        </span>
+                    </div>
+                </h1>
+            </div>
+            <!-- <h3 class="word text-center fst-italic fw-bold mb-5">Opciones de administrador</h3> -->
             <div class="col-md-3 shadow-lg p-4 mb-5 mx-4  bg-white rounded">
                 <div class="text-center">
                     <div class="card-body">
@@ -140,5 +149,6 @@ $user = $_SESSION['admin'];
     </div>
 </body>
 <?php include '../Layouts/footer.php'; ?>
+<script src="../../Js/typinganimation.js"></script>
 
 </html>
