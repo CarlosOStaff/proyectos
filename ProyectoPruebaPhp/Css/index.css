@@ -1,0 +1,9 @@
+.titulo{
+    font-size: 4rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 5px 2px #8c8d8f, 2px 4px #8c8d8f, 3px 5px #8c8d8f;
+}
+p{
+    font-size: 1.2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
