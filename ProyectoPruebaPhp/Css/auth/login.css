@@ -1,0 +1,79 @@
+body {
+    background-image: url('../../Recursos/img/premium_photo-1667587245819-2bea7a93e7a1.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.336);
+}
+
+.card-title {
+    font-size: 2.1rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 3px 4px rgb(161, 150, 150);
+}
+
+.link {
+    cursor: pointer;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1rem;
+    color: black;
+    text-decoration-line: none;
+    text-shadow: 4px 8px #8c8d8f;
+}
+
+.link:hover {
+    color: rgb(7, 3, 77);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-shadow: none;
+}
+
+.btn-login {
+    background: transparent;
+    cursor: pointer;
+    border: 0.2vw rgb(65, 65, 155) solid;
+    border-radius: 0px 1.5vw 0px 1.5vw;
+    padding: 0.5vw;
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: initial;
+    box-shadow: 2px 5px 9px #646464;
+}
+
+.btn-login:hover {
+    background: rgb(65, 65, 155);
+    color: white;
+    font-size: 1rem;
+    font-size: 800;
+    font-family: initial;
+    box-shadow: none;
+}
+
+.forgtopassword {
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.forgtopassword:hover {
+    font-size: 0.8rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 800;
+    text-decoration: none;
+    text-shadow:none;
+}
+.txt{
+    font-size: 1.2rem;
+    color:rgb(0, 0, 0);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+input{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1rem;
+}
