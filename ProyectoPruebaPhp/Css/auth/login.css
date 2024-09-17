@@ -13,16 +13,16 @@ body {
 .card-title {
     font-size: 2.1rem;
     font-family: 'Courier New', Courier, monospace;
-    text-shadow: 3px 4px rgb(161, 150, 150);
+    text-shadow: 5px 6px 3px rgb(161, 150, 150);
 }
 
 .link {
     cursor: pointer;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1rem;
-    color: black;
+    color: rgb(7, 3, 77)!important;
     text-decoration-line: none;
-    text-shadow: 4px 8px #8c8d8f;
+    text-shadow: 4px 8px 3px #8c8d8f;
 }
 
 .link:hover {

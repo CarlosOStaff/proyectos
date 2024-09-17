@@ -14,8 +14,9 @@ require '../../Claves/claves.php';
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="../../Css/auth/login.css">
   <link rel="stylesheet" href="../../Css/modal.css">
-  <script src="https://www.google.com/recaptcha/api.js?hl=es" async defer></script>
-
+<!-- Script para cargar y ejecutar el recaptcha -->  
+ <script src="https://www.google.com/recaptcha/api.js?hl=es" async defer></script>
+<!-- -->
 
 </head>
 
@@ -45,8 +46,12 @@ require '../../Claves/claves.php';
                 </div>
                 <div class="row">
                   <div class="rounded-2 col text-center">
+                    <!-- Integración del widget de recaptcha, la variable, 
+                    la variable $claves[‘publicKey’] hace referencia a la clave de sitio
+                     que se genera cuando se configuras el servicio. -->
                     <div class="g-recaptcha d-inline-block" name="g-recaptcha-response" 
                     data-sitekey="<?php echo $claves['publicKey'] ?>"></div>
+                    <!--  -->
                   </div>
                   <div class="row justify-content-end">
                     <div class="col-sm-9">

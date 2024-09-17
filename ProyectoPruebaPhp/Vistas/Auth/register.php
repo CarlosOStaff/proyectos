@@ -13,24 +13,32 @@ session_start();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../../Css/modal.css" />
+    <link rel="stylesheet" href="../../Css/auth/registro.css">
 </head>
 
 <body>
+    <div class="justify-content-center align-items-center d-flex">
+        <h2 class="txt-title t-stroke t-shadow text-center fst-italic fw-bold mt-3 mb-3">Registrate para poder ver nuestros catalogos de libros</h2>
+    </div>
     <div class="container">
-        <h2 class="text-center fst-italic fw-bold mt-3 mb-3">Registrate para poder ver nuestros catalogos de libros</h2>
-        <div class="row justify-content-center align-items-center">
-            <div class="col-xl-6 shadow-lg mt-4 p-4 rounded-4">
-
-                <div class="">
-                    <a href="..\Home\index.php">Volver al inicio</a>
+        <div class="row h-100 w-100 mx-0 mt-3 mb-5">
+            <div class="col-form col-lg-12 d-flex justify-content-center align-items-center">
+                <!-- Columna de la imagen, que cubrirá el lado izquierdo -->
+                <div class="h-100 w-100">
+                    <img src="../../Recursos/img/PORTADA.jpg" class="img-fluid h-100 w-100" alt="Imagen de portada">
+                </div>
+                
+                <div class="card p-4 w-100">
+                    <a class="link mx-3" href="..\Home\index.php">
+                        <i class="fas fa-undo-alt mx-1"></i> Volver al inicio
+                    </a>
                     <div class="card-body">
                         <h3 class="card-title mb-4 text-center fst-italic fw-bold">Ingresa tus datos personales</h3>
-
-                        <form action="..\..\Auth\register.php" method="POST" id="frm"
-                            onsubmit="return validarPasswords()">
+                        <form action="..\..\Auth\register.php" method="POST" id="frm" onsubmit="return validarPasswords()">
+                            <!-- Campos del formulario -->
                             <div class="row mb-4">
                                 <label for="horizontal-firstname-input"
-                                    class="col-sm-3 col-form-label fst-italic fw-bold text-end">Nombre:</label>
+                                    class="txt-label col-sm-3 col-form-label fst-italic fw-bold text-end">Nombre:</label>
                                 <div class="col-sm-9">
                                     <input type="text" required name="nombre" class="form-control"
                                         id="horizontal-firstname-input" placeholder="Joaquin">
@@ -38,7 +46,7 @@ session_start();
                             </div>
                             <div class="row mb-4">
                                 <label for="horizontal-firstname-input"
-                                    class="col-sm-3 col-form-label fw-bold fst-italic text-end">Apellidos:</label>
+                                    class="txt-label col-sm-3 col-form-label fw-bold fst-italic text-end">Apellidos:</label>
                                 <div class="col-sm-9">
                                     <input type="text" name="apellido" required class="form-control"
                                         id="horizontal-firstname-input" placeholder="Villa Garcia">
@@ -46,7 +54,7 @@ session_start();
                             </div>
                             <div class="row mb-4">
                                 <label for="horizontal-email-input"
-                                    class="col-sm-3 col-form-label fw-bold fst-italic text-end">Email:</label>
+                                    class="txt-label col-sm-3 col-form-label fw-bold fst-italic text-end">Email:</label>
                                 <div class="col-sm-9">
                                     <input type="email" name="email" required class="form-control"
                                         id="horizontal-email-input" placeholder="Ingresa tu correo electronico">
@@ -54,7 +62,7 @@ session_start();
                             </div>
                             <div class="row mb-4">
                                 <label for="horizontal-password-input"
-                                    class="col-sm-3 col-form-label fw-bold fst-italic text-end">Password:</label>
+                                    class="txt-label col-sm-3 col-form-label fw-bold fst-italic text-end">Password:</label>
                                 <div class="col-sm-9">
                                     <input type="password" required name="password" id="password" class="form-control"
                                         placeholder="Ingresa tu contraseña">
@@ -62,7 +70,7 @@ session_start();
                             </div>
                             <div class="row mb-4">
                                 <label for="horizontal-password-input"
-                                    class="col-sm-3 col-form-label fw-bold fst-italic text-end">Confirmar
+                                    class="txt-label col-sm-3 col-form-label fw-bold fst-italic text-end">Confirmar
                                     Password:</label>
                                 <div class="col-sm-9">
                                     <input type="password" required name="confirmar_password" id="confirmar_password"
@@ -71,7 +79,7 @@ session_start();
                             </div>
                             <div class="row mb-4">
                                 <label for="formrow-inputState"
-                                    class="col-sm-3 col-form-label text-end fst-italic fw-bold">Ciudades:</label>
+                                    class="txt-label col-sm-3 col-form-label text-end fst-italic fw-bold">Ciudades:</label>
                                 <div class="col-sm-9">
                                     <select name="ciudad_id" id="ciudad_id" class="form-select">
                                         <option value="">Selecciona una ciudad</option>
@@ -98,7 +106,7 @@ session_start();
                                     <div class="col-sm-9">
                                         <div>
                                             <button type="submit"
-                                                class="btn btn-outline-primary w-md fst-italic fw-bold">
+                                                class="btn btn-outline-success w-md fst-italic fw-bold">
                                                 <i class="fas fa-save"></i>
                                                 Guardar</button>
                                         </div>
@@ -106,24 +114,11 @@ session_start();
                                 </div>
                         </form>
                     </div>
-                    <!-- end card body -->
                 </div>
-                <!-- end card -->
-                <script type="text/javascript">
-                    function validarPasswords() {
-                        var pass = document.getElementById("password").value;
-                        var repass = document.getElementById("confirmar_password").value;
-
-                        if (pass != repass) {
-                            alert("Las contraseñas no coinciden");
-                            return false; // Evita el envío del formulario
-                        }
-                        return true; // Permite el envío del formulario
-                    }
-                </script>
             </div>
         </div>
     </div>
+
     <?php include '../Layouts/modal.php'; ?>
 
 </body>

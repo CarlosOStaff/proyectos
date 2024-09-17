@@ -12,7 +12,7 @@ $verify_url = 'https://www.google.com/recaptcha/api/siteverify';
 
 // Datos a enviar para la verificación
 $data = array(
-    'secret' => $claves['secretKey'],
+    'secret' => $claves['secretKey'],/*Hace referencia a la secret key que se genera en google recaptcha*/
     'response' => $response,
     'remoteip' => $remote_ip
 );
