@@ -11,5 +11,5 @@ WHERE b.id NOT IN (
     JOIN books b ON l.libro_id = b.id
     WHERE l.user_id = $user
 )
-ORDER BY b.id";
+ORDER BY b.id ASC";
 $result = $mysqli->query($query);
